@@ -9,14 +9,14 @@ table 78603 "BAC Target Language"
         {
             DataClassification = AccountData;
             Caption = 'Project Code';
-            TableRelation = "BAC Translation Project Name";
+            TableRelation = "BAC Translation Project";
             Editable = false;
         }
         field(20; "Project Name"; Text[100])
         {
             Caption = 'Project Name';
             FieldClass = FlowField;
-            CalcFormula = lookup ("BAC Translation Project Name"."Project Name" where ("Project Code" = field ("Project Code")));
+            CalcFormula = lookup ("BAC Translation Project"."Project Name" where("Project Code" = field("Project Code")));
             Editable = false;
         }
 

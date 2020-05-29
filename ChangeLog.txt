@@ -17,7 +17,7 @@ Change log for the AL Translation Tool:
         - xmlport 78603 "BAC Import Trans. Source 2018": Added support for NAV 2018
         - xmlport 78604 "BAC Export Trans Target 2018" : Added support for NAV 2018
         - xmlport 78605 "BAC Import Trans Target 2018" : Added support for NAV 2018
-        - table 78600 "BAC Translation Project Name"   : Added field for NAV version
+        - table 78600 "BAC Translation Project"   : Added field for NAV version
         - table 78601 "BAC Translation Source"         : Added field "Max Width" for NAV 2018
         - table 78602 "BAC Translation Target"         : Added field "Max Width" for NAV 2018
         - page 78600 "BAC Trans Project List"          : Added support for NAV 2018

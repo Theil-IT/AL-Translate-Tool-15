@@ -44,11 +44,13 @@ page 78603 "BAC Translation Target List"
                 SubPageLink = "Project Code" = field("Project Code"),
                             "Trans-Unit Id" = field("Trans-Unit Id");
                 Editable = false;
+                ApplicationArea = All;
             }
             part(TargetFactbox; "BAC Trans Target Factbox")
             {
                 SubPageLink = "Project Code" = field("Project Code"),
                             "Trans-Unit Id" = field("Trans-Unit Id");
+                ApplicationArea = All;
             }
 
         }
@@ -66,12 +68,13 @@ page 78603 "BAC Translation Target List"
                 Image = Translation;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
                 Enabled = ShowTranslate;
 
                 trigger OnAction();
                 var
                     GoogleTranslate: Codeunit "BAC Google Translate Rest";
-                    Project: Record "BAC Translation Project Name";
+                    Project: Record "BAC Translation Project";
                 begin
                     Project.get("Project Code");
                     Target := GoogleTranslate.Translate(Project."Source Language ISO code",
@@ -89,6 +92,7 @@ page 78603 "BAC Translation Target List"
                 Promoted = true;
                 PromotedOnly = true;
                 Enabled = ShowTranslate;
+                PromotedCategory = Process;
 
                 trigger OnAction();
                 var
@@ -110,6 +114,7 @@ page 78603 "BAC Translation Target List"
                 Image = Approve;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
                 trigger OnAction()
                 var
                     WarningTxt: Label 'Mark all untranslated lines to be translated?';
@@ -132,6 +137,7 @@ page 78603 "BAC Translation Target List"
                 Image = Cancel;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
                 trigger OnAction()
                 var
                     WarningTxt: Label 'Remove mark from all lines and disable translation?';
@@ -152,6 +158,7 @@ page 78603 "BAC Translation Target List"
                 Image = RemoveLine;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
                 trigger OnAction()
                 var
                     WarningTxt: Label 'Remove all translations?';
@@ -171,6 +178,7 @@ page 78603 "BAC Translation Target List"
                 Image = BeginningText;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
                 RunObject = page "BAC Translation terms";
                 RunPageLink = "Project Code" = field("Project Code"),
                             "Target Language" = field("Target Language");
@@ -182,12 +190,13 @@ page 78603 "BAC Translation Target List"
                 Image = ExportFile;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
                 trigger OnAction()
                 var
                     WarningTxt: Label 'Export the Translation file?';
                     ExportTranslation: XmlPort "BAC Export Translation Target";
                     ExportTranslation2018: XmlPort "BAC Export Trans Target 2018";
-                    TransProject: Record "BAC Translation Project Name";
+                    TransProject: Record "BAC Translation Project";
                 begin
                     if Confirm(WarningTxt) then begin
                         TransProject.get("Project Code");
@@ -238,7 +247,7 @@ page 78603 "BAC Translation Target List"
         GoogleTranslate: Codeunit "BAC Google Translate Rest";
         TransTarget: Record "BAC Translation Target";
         TransTarget2: Record "BAC Translation Target";
-        Project: Record "BAC Translation Project Name";
+        Project: Record "BAC Translation Project";
         Window: Dialog;
         DialogTxt: Label 'Converting #1###### of #2######';
         Counter: Integer;

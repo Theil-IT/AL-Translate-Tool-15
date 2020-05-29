@@ -45,6 +45,7 @@ page 78607 "BAC Translation Setup"
         {
             part(Logo; "BAC AL Logo FactBox")
             {
+                ApplicationArea=All;
             }
         }
     }
@@ -60,6 +61,7 @@ page 78607 "BAC Translation Setup"
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;
+                ApplicationArea=All;
             }
 
         }

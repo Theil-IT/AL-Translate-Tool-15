@@ -1,4 +1,4 @@
-table 78600 "BAC Translation Project Name"
+table 78600 "BAC Translation Project"
 {
     Caption = 'Translation Project Name';
     DataClassification = SystemMetadata;
@@ -42,6 +42,12 @@ table 78600 "BAC Translation Project Name"
                     clear("Source Language ISO code");
             end;
         }
+        field(32; "Target Language"; Text[10])
+        {
+            Caption = 'Target Language';
+            DataClassification = AccountData;
+        }
+
         field(35; "Source Language ISO code"; Text[10])
         {
             Caption = 'Source Language';
@@ -102,7 +108,13 @@ table 78600 "BAC Translation Project Name"
             OptionMembers = "Dynamics NAV 2018","Dynamics 365 Business Central";
             OptionCaption = 'Dynamics NAV 2018,Dynamics 365 Business Central';
         }
-
+        field(130; Status; Option)
+        {
+            Caption = 'Status';
+            DataClassification = SystemMetadata;
+            OptionMembers = Open,Released,Closed;
+            OptionCaption = 'Open,Released,Closed';
+        }
     }
 
     keys
@@ -113,8 +125,16 @@ table 78600 "BAC Translation Project Name"
         }
     }
 
+    fieldgroups
+    {
+        fieldgroup("DropDown"; "Project Code", "Project Name")
+        {
+
+        }
+    }
+
     var
-        TransProject: Record "BAC Translation Project Name";
+        TransProject: Record "BAC Translation Project";
 
     trigger OnInsert()
     var

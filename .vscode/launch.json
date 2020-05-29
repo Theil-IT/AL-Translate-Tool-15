@@ -17,9 +17,12 @@
             "numberOfSqlStatements": 10
         },
         {
-            "name": "Microsoft cloud sandbox",
+            "name": "Translate Server",
             "type": "al",
             "request": "launch",
+            "server": "http://ba-consult.dk",
+            "serverInstance": "BC150_Translate",
+            "authentication": "UserPassword",
             "breakOnError": true,
             "breakOnRecordWrite": false,
             "launchBrowser": true,
@@ -27,7 +30,7 @@
             "enableLongRunningSqlStatements": true,
             "longRunningSqlStatementsThreshold": 500,
             "numberOfSqlStatements": 10,
-            "sandboxName": "Translate"
+            "schemaUpdateMode": "ForceSync"
         }
     ]
 }

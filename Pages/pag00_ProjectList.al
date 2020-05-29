@@ -4,7 +4,7 @@ page 78600 "BAC Trans Project List"
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "BAC Translation Project Name";
+    SourceTable = "BAC Translation Project";
     SourceTableView = sorting("Project Code") order(descending);
 
     layout
@@ -28,6 +28,11 @@ page 78600 "BAC Trans Project List"
                 {
                     ApplicationArea = All;
 
+                }
+                field(Status; Status)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Open Projects which means projects in process - Released Projects which means sent to customer, but not finished - Finished Projects which means sent to customer and done for now';
                 }
                 field("NAV Version"; "NAV Version")
                 {
@@ -53,10 +58,6 @@ page 78600 "BAC Trans Project List"
                 }
             }
         }
-        area(Factboxes)
-        {
-
-        }
     }
 
     actions
@@ -70,6 +71,7 @@ page 78600 "BAC Trans Project List"
                 Image = ImportCodes;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
 
                 trigger OnAction()
                 var
@@ -78,7 +80,7 @@ page 78600 "BAC Trans Project List"
                     TransSource: Record "BAC Translation Source";
                     TransNotes: Record "BAC Translation Notes";
                     DeleteWarningTxt: Label 'This will overwrite the Translation source for %1';
-                    TransProject: Record "BAC Translation Project Name";
+                    TransProject: Record "BAC Translation Project";
                     ImportedTxt: Label 'The file %1 has been imported into project %2';
                 begin
                     TransSource.SetRange("Project Code", "Project Code");
@@ -101,21 +103,9 @@ page 78600 "BAC Trans Project List"
                             end;
                     end;
                     TransProject.Get("Project Code");
-                    message(ImportedTxt, TransProject."File Name", "Project Code");
+                    if (TransProject."File Name" <> '') then
+                        message(ImportedTxt, TransProject."File Name", "Project Code");
                 end;
-            }
-        }
-        area(Navigation)
-        {
-            action("Translation Source")
-            {
-                ApplicationArea = All;
-                Caption = 'Translation Source';
-                Image = SourceDocLine;
-                Promoted = true;
-                PromotedOnly = true;
-                RunObject = page "BAC Translation Source List";
-                RunPageLink = "Project Code" = field("Project Code");
             }
             action("Target Languages")
             {
@@ -124,11 +114,42 @@ page 78600 "BAC Trans Project List"
                 Image = Language;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
                 RunObject = page "BAC Target Language List";
                 RunPageLink = "Project Code" = field("Project Code"),
                 "Source Language" = field("Source Language"),
                 "Source Language ISO code" = field("Source Language ISO code");
             }
+            action("Translation Source")
+            {
+                ApplicationArea = All;
+                Caption = 'Translation Source';
+                Image = SourceDocLine;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                RunObject = page "BAC Translation Source List";
+                RunPageLink = "Project Code" = field("Project Code");
+            }
         }
     }
+    trigger OnOpenPage()
+    var
+        UserAccess: Record "BAC User Access";
+        FilterTxt: Text;
+    begin
+        UserAccess.SetRange("User Id", UserId());
+        if UserAccess.FindSet() then
+            Repeat
+                if FilterTxt <> '' then
+                    FilterTxt += '|' + UserAccess."Project Code"
+                else
+                    FilterTxt := UserAccess."Project Code";
+            until UserAccess.Next() = 0;
+        if FilterTxt <> '' then begin
+            FilterGroup(1);
+            SetFilter("Project Code", FilterTxt);
+            FilterGroup(0);
+        end;
+    end;
 }

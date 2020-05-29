@@ -151,7 +151,7 @@ xmlport 78605 "BAC Import Trans Target 2018"
         TransNotes: Record "BAC Translation Notes";
         TargetLanguage: Record "BAC Target Language";
         TransTarget: Record "BAC Translation Target";
-        TransProject: Record "BAC Translation Project Name";
+        TransProject: Record "BAC Translation Project";
 
     procedure SetProjectCode(inProjectCode: Code[10]; inSourceLangISOCode: text[10]; inTargetLangISOCode: Text[10])
     begin

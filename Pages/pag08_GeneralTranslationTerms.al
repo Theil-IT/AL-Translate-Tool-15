@@ -17,6 +17,7 @@ page 78608 "BAC Gen. Translation Terms"
                 {
                     Caption = 'Language Filter';
                     TableRelation = Language where ("BAC ISO code" = filter ('<>'''''));
+                    ApplicationArea=All;
                     trigger OnValidate()
                     begin
                         if LanguageFilter <> '' then

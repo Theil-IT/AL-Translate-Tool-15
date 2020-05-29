@@ -54,11 +54,11 @@ page 78602 "BAC Target Language List"
                 Image = Translate;
                 Promoted = true;
                 PromotedOnly = true;
-                PromotedIsBig = true;
+                PromotedCategory = Process;
                 RunObject = page "BAC Translation Target List";
-                RunPageLink = "Project Code" = field ("Project Code"),
-                            "Target Language" = field ("Target Language"),
-                            "Target Language ISO code" = field ("Target Language ISO code");
+                RunPageLink = "Project Code" = field("Project Code"),
+                            "Target Language" = field("Target Language"),
+                            "Target Language ISO code" = field("Target Language ISO code");
             }
             action("Translation Terms")
             {
@@ -67,9 +67,10 @@ page 78602 "BAC Target Language List"
                 Image = BeginningText;
                 Promoted = true;
                 PromotedOnly = true;
+                PromotedCategory = Process;
                 RunObject = page "BAC Translation terms";
-                RunPageLink = "Project Code" = field ("Project Code"),
-                            "Target Language" = field ("Target Language");
+                RunPageLink = "Project Code" = field("Project Code"),
+                            "Target Language" = field("Target Language");
             }
             action("Export Translation File")
             {
@@ -79,12 +80,13 @@ page 78602 "BAC Target Language List"
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedIsBig = true;
+                PromotedCategory = Process;
                 trigger OnAction()
                 var
                     WarningTxt: Label 'Export the Translation file?';
                     ExportTranslation: XmlPort "BAC Export Translation Target";
                     ExportTranslation2018: XmlPort "BAC Export Trans Target 2018";
-                    TransProject: Record "BAC Translation Project Name";
+                    TransProject: Record "BAC Translation Project";
                 begin
                     if Confirm(WarningTxt) then begin
                         TransProject.get("Project Code");
@@ -112,13 +114,14 @@ page 78602 "BAC Target Language List"
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedIsBig = true;
+                PromotedCategory = Process;
 
                 trigger OnAction()
                 var
                     ImportTarget: XmlPort "BAC Import Translation Target";
                     ImportTarget2018: XmlPort "BAC Import Trans Target 2018";
                     TransTarget: Record "BAC Translation Target";
-                    TransProject: Record "BAC Translation Project Name";
+                    TransProject: Record "BAC Translation Project";
                     DeleteWarningTxt: Label 'This will overwrite existing Translation Target entries for %1';
                     ImportedTxt: Label 'The file %1 has been imported into project %2';
                     FileName: Text;

@@ -137,7 +137,7 @@ xmlport 78603 "BAC Import Trans. Source 2018"
         ProjectCode: Code[10];
         MissingProjNameTxt: Label 'Project Name is Missing';
         TransNotes: Record "BAC Translation Notes";
-        TransProject: Record "BAC Translation Project Name";
+        TransProject: Record "BAC Translation Project";
         DummyMaxWidth: Text;
 
     trigger OnPostXmlPort()

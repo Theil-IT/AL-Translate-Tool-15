@@ -97,7 +97,7 @@ xmlport 78604 "BAC Export Trans Target 2018"
                             tableelement(note; "BAC Translation Notes")
                             {
                                 LinkTable = Target;
-                                LinkFields = "Project Code" = field ("Project Code"), "Trans-Unit Id" = field ("Trans-Unit Id");
+                                LinkFields = "Project Code" = field("Project Code"), "Trans-Unit Id" = field("Trans-Unit Id");
 
                                 fieldattribute(from; note.From)
                                 {
@@ -163,7 +163,7 @@ xmlport 78604 "BAC Export Trans Target 2018"
 
     var
         TransNotes: Record "BAC Translation Notes";
-        TransProject: Record "BAC Translation Project Name";
+        TransProject: Record "BAC Translation Project";
         ProjectCode: Code[10];
         SourceTransCode: Text[10];
         TargetTransCode: Text[10];
