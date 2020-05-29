@@ -32,11 +32,11 @@ xmlport 78601 "BAC Export Translation Target"
                         datatype := 'xml';
                     end;
                 }
-                textattribute("Source-language")
+                textattribute("source-language")
                 {
                     trigger OnBeforePassVariable()
                     begin
-                        "Source-language" := SourceTransCode;
+                        "source-language" := SourceTransCode;
                     end;
                 }
                 textattribute("target-language")

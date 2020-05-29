@@ -29,6 +29,11 @@ page 78603 "BAC Translation Target List"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Enter the translated text';
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Update(true);
+                    end;
+
                 }
                 field(Occurrencies; Occurrencies)
                 {

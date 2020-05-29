@@ -4,7 +4,6 @@ xmlport 78602 "BAC Import Translation Target"
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
-    FileName = 'C:\Users\Peikba\Desktop\ManPlus.xml';
     XmlVersionNo = V10;
     Format = Xml;
     PreserveWhiteSpace = true;
@@ -113,11 +112,15 @@ xmlport 78602 "BAC Import Translation Target"
                                         TransNotes.Priority := priority;
                                     end;
                                 }
-                                trigger OnAfterAssignVariable()
-                                begin
-                                    TransNotes.Note := note;
-                                    CreateTranNote();
-                                end;
+                                textattribute(note2)
+                                {
+                                    XmlName = 'note';
+                                    trigger OnAfterAssignVariable()
+                                    begin
+                                        TransNotes.Note := note2;
+                                        CreateTranNote();
+                                    end;
+                                }
                             }
                             fieldelement(target; Target.Target)
                             {

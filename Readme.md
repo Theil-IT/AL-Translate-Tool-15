@@ -7,6 +7,7 @@ Statistics on projects
 - Total captions
 - Total Not translated captions
 - Total missing captions
+- Default Target language in Setup
 
 # 29-05-2020
 Added User Access

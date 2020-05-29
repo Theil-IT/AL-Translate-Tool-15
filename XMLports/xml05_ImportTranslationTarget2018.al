@@ -4,7 +4,6 @@ xmlport 78605 "BAC Import Trans Target 2018"
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF16;
-    FileName = 'C:\Users\Peikba\Desktop\ManPlus.xml';
     XmlVersionNo = V10;
     Format = Xml;
     PreserveWhiteSpace = true;

@@ -22,26 +22,26 @@ page 78614 "BAC Translation Role Center"
             {
                 Caption = 'Translation Setup';
                 RunObject = Page "BAC Translation Setup";
-                ApplicationArea=All;
+                ApplicationArea = All;
             }
         }
-        area(Sections)
-        {
-            group(SectionsGroupName)
-            {
-                Caption = '';
-                action(SectionsAction)
-                {
-                    ApplicationArea=All;
-                    //RunObject = Page ObjectName;
-                }
-            }
-        }
+        // area(Sections)
+        // {
+        //     group(SectionsGroupName)
+        //     {
+        //         Caption = '';
+        //         action(SectionsAction)
+        //         {
+        //             ApplicationArea=All;
+        //             //RunObject = Page ObjectName;
+        //         }
+        //     }
+        // }
         area(Embedding)
         {
             action("Translation Projects")
             {
-                ApplicationArea=All;
+                ApplicationArea = All;
                 RunObject = Page "BAC Trans Project List";
             }
         }

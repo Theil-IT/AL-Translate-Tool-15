@@ -107,6 +107,7 @@ table 78600 "BAC Translation Project"
             Caption = 'NAV Version';
             OptionMembers = "Dynamics NAV 2018","Dynamics 365 Business Central";
             OptionCaption = 'Dynamics NAV 2018,Dynamics 365 Business Central';
+            InitValue = 1;
         }
         field(130; Status; Option)
         {

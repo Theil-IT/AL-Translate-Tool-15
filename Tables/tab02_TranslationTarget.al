@@ -45,27 +45,11 @@ table 78602 "BAC Translation Target"
         {
             DataClassification = AccountData;
             Caption = 'Target';
-            trigger OnValidate()
-            var
-                Instances: Integer;
-                TransTarget: Record "BAC Translation Target";
-                QuestionTxt: Label 'Copy the Target to all other instances?';
-            begin
-                TransTarget.SetRange(Source, Source);
-                Instances := TransTarget.Count;
-                if Target = '' then
-                    exit;
-                if Instances > 1 then begin
-                    if CurrFieldNo > 0 then
-                        if not confirm(QuestionTxt) then
-                            exit;
-                    TransTarget.ModifyAll(Target, Target);
-                    TransTarget.ModifyAll(Translate, false);
-                end;
-                if Target <> '' then
-                    Translate := false;
-            end;
 
+            trigger OnValidate()
+            begin
+                UpdateAllTargetInstances();
+            end;
         }
         field(70; "Translate"; Boolean)
         {
@@ -97,7 +81,7 @@ table 78602 "BAC Translation Target"
         {
             Caption = 'Occurrencies';
             FieldClass = FlowField;
-            CalcFormula = count ("BAC Translation Target" where (Source = field (Source)));
+            CalcFormula = count ("BAC Translation Target" where(Source = field(Source)));
         }
 
     }
@@ -109,4 +93,26 @@ table 78602 "BAC Translation Target"
             Clustered = true;
         }
     }
+    procedure UpdateAllTargetInstances()
+    var
+        TransTarget: Record "BAC Translation Target";
+        Instances: Integer;
+        QuestionTxt: Label 'Copy the Target to all other instances?';
+    begin
+        TransTarget.Copy(Rec);
+        TransTarget.SetRange(Source, Source);
+        Instances := TransTarget.Count;
+        if Target = '' then
+            exit;
+        if Instances > 1 then begin
+            if CurrFieldNo > 0 then
+                if not confirm(QuestionTxt) then
+                    exit;
+            TransTarget.SetFilter("Line No.", '<>%1', "Line No.");
+            TransTarget.ModifyAll(Target, Target);
+            TransTarget.ModifyAll(Translate, false);
+        end;
+        if Target <> '' then
+            Translate := false;
+    end;
 }

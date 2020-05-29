@@ -1,0 +1,1194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Manufacturing Plus">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 536085707 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manufacturing Plus Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1528922231 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable BOM Lines window</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Disable BOM Lines window - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3688282723 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable Routing Lines window</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Disable Routing Lines window - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3367992789 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post Prod. Costs from Purchase Invoice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Post Prod. from Purchase Inv - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3426341449 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post to Production from Purchase Creditmemo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Post Prod. from Purch. Crm - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2261260061 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable BOM per SKU</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable BOM per SKU - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3003197905 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Routing per SKU</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Routing per SKU - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1423671089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max Over Receipt Pct.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Max Over Receipt Pct. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2535181075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max Under Receipt Pct.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Max Under Receipt Pct. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2344151949 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max Over Shipment Pct.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Max Over Shipment Pct. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1302886487 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max Under Shipment Pct.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Max Under Shipment Pct. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 750087577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Purchase Docking Factbox</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Purchase Cross Docking - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 128587117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Production Docking Factbox</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Prod. Cross Docking - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 575526843 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prevent Planning before Work Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Prevent Planning before WD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3588730457 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Item Avail. By Event on Planning Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Item Avail By Event on PW - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2943662911 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Automatic change Routing Status</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Automatic Routing Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1066188189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest Setup and Run Times in Prod. Journal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Suggest Times in Prod. Journal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 796269754 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Prod. Planner RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Add Final Cost to Prod Planner - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2819604774 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Machine Operator RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Add FC to Machine Oper - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 485083534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Shop Supervisor RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Add FC to Shop Super - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2037453664 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Shop Supervisor Foundation RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Add FC to Shop Super Found - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3682450961 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Planned POs</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Add FC to Planned POs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3552725345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Firm Planned POs</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Add FC to Firm Planned POs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1574821138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Released POs</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Add FC to Released POs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 4180249443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Finished POs</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Add FC to Finished POs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 326576098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Finish Cue on Production Planner RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Show Finish Cue Prod. Plan RC - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1325584570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Consumption Jnl on Prod. Planner RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Show Consumption Jnl on RC - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1512320016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Output Jnl on Prod. Planner RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Show Output Jnl on RC - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3560144770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select/Deselect actions on Planning Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Select/Deselect act on Plan WS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 872824917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select/Deselect actions on Requision Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Select/Deselect act on Req WS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2638764919 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Avail. By Event on Requisition Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Item Avail By Event on RW - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1394699940 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Installation Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Installation Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3142631117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expiry Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Expiry Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3357837221 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>License</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field License - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3357837221 - Method 2126772001 - NamedType 1916287837" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Expiry Date %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field License - Method OnValidate - NamedType MessageTxt</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1684721775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Version No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Version No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1299338897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warning Shown</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Warning Shown - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1801113646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>App Logo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field App Logo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 511313318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>License E-mail</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field License E-mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3461678793 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Welcome txt shown</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Welcome txt shown - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3552902751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Item Creation data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Item Creation data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3552902751 - Method 2126772001 - NamedType 595387682" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add the 'Last Date Modified' to the Creation Date?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Item Creation data - Method OnValidate - NamedType QuestionTxt</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 746252584 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Creation done</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Item Creation done - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 1875422491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable BOM per Variant</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable BOM per Variant - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 396494335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Routing per Variant</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Routing per Variant - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2394449413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Internal Sales Person</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Internal Sales Person - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 2394449413 - Method 2126772001 - NamedType 3492639454" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remember to add all users that create sales documents in User Setup.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Internal Sales Person - Method OnValidate - NamedType WarningTxt</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 209914871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show BOM Version window</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Show BOM Version window - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 3486233923 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Routing Version window</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Show Routing Version window - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 4076715617 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable Internal Purchaser</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Internal Purchaser - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Field 4076715617 - Method 2126772001 - NamedType 3492639454" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remember to add all users that create purchase documents in User Setup.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Field Enable Internal Purchaser - Method OnValidate - NamedType WarningTxt</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Method 3919170049 - NamedType 1839482312" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preparing %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Method PreparePurchaseLines - NamedType PreparingTxt</note>
+        </trans-unit>
+        <trans-unit id="Table 536085707 - Method 1911820888 - NamedType 1839482312" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preparing %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Man. Plus Setup - Method PrepareSalesLines - NamedType PreparingTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manufacturing Plus Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2355562690 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BOM and Routing functions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control BOM and Routing functions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1528922231 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable BOM Lines window if an active BOM version exist</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Disable BOM Lines window - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3688282723 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disable Routing Lines window if an active Routing version exist</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Disable Routing Lines window - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 209914871 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show BOM Version window if active routing version exist</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Show BOM Version window - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3486233923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Routing Version window if active routing version exist</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Show Routing Version window - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3004464020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Cost Posting</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Production Cost Posting - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 736116149 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post costs directly from a purchase invoice into the production order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Post Prod. from Purchase Invoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2531472271 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reverse costs posted directly from a purchase invoice into the production order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Post Prod. Costs from Purchase Creditmemo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1862366106 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Stockkeeping Unit Enhancements</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Stockkeeping Unit Enhancements - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2261260061 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable adding separate BOMs per Stockkeeping Unit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable BOM per SKU - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3003197905 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable adding separate Routings per Stockkeeping Unit</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable Routing per SKU - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1767943144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant Enhancements</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Variant Enhancements - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1875422491 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable adding separate BOMs per Variant code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable BOM per Variant - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 396494335 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable adding separate Routings per Variant code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable Routing per Variant - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2550629778 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Over/Under receipts and Shipments</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Over/Under receipts and Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1423671089 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable receiving more than ordered on a Purchase Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Max Over Receipt Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2535181075 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable receiving less than ordered on a Purchase Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Max Under Receipt Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2344151949 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable shipping more than ordered on a Sales Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Max Over Shipment Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1302886487 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable shipping less than ordered on a Sales Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Max Under Shipment Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2248578591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cross Docking</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Cross Docking - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3140761302 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable a FactBox on the Purchase Order to show if the incomming item is needed for a sales order, a transfer order or in the production</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable Purchase Cross Docking Factbox - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 903044910 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable a FactBox on the Production Order to show if the incomming item is needed for a sales order, a transfer order or in the production</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable Production Cross Docking Factbox - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 4106336951 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Planning</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Planning - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 575526843 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Give a warning if the earliest starting date of the planning is before the working date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Prevent Planning before WD - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3144460829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Planning Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Planning Worksheet - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3588730457 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add the Item Avail. By Event in the bottom of the Planning Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Item Avail By Event on PW - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3560144770 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add a ""Select All"" and a ""Deselect All"" action to the Planning Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Select/Deselect act on Plan WS - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2896033718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Requisition Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Requisition Worksheet - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2638764919 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add the Item Avail. By Event in the bottom of the Requisition Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Item Avail By Event on RW - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 872824917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add a ""Select All"" and a ""Deselect All"" action to the Requisition Worksheet</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Select/Deselect act on Req WS - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3991974766 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Execution</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Execution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2943662911 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Automatic change the Routing Status of the next operation when finishing the previous</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Automatic Routing Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1066188189 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Suggest Setup and Run Times in Production Journal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Suggest Times in Prod. Journal - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3998424446 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Finished but not finalized productions as Cue on Production Planner RC</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Show Finish Cue on Manuf RC - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3365016562 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Planner Role Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Production Planner Role Center - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1325584570 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Consumption Journal on Production Planner Role Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Show Consumption Jnl on RC - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1512320016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Output Journal on Production Planner Role Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Show Output Jnl on RC - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 182379520 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Role Centers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Role Centers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 796269754 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Prod. Planner Role Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Add Final Cost to Prod Planner - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2819604774 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Machine Operator Role Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Add FC to Machine Oper - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 485083534 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Shop Supervisor Role Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Add FC to Shop Super - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2037453664 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Shop Supervisor Foundation Role Center</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Add FC to Shop Super Found - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2326345770 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Production Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2658355637 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Planned Production order pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Add FC to Planned - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2420428544 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Firm Planned Production order pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Add FC to Firm Plan - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 1167389542 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Released Production order pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Add FC to Released - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2619431071 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Final Costing Report to Finished Production order pages</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Add FC to Finished - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 334192955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Internal Sales People/Purchasers</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Internal Sales People/Purchasers - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2394449413 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enabling Internal Sales Person requires that all users that create sales documents must be created in user setup, connecting the user and the sales person code. The Internal Sales Person will automatically be registered on a sales document on creation.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable Internal Sales Person - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 4076715617 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enabling Internal Purchaser requires that all users that create purchase documents must be created in user setup, connecting the user and the Purchaser code. The Internal Purchaser will automatically be registered on a purchase document on creation.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable Internal Purchaser - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3184809407 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Register Item Creation Data</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Register Item Creation Data - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 3552902751 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enable registering of the actual creation date and the user creating the item.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Enable Item Creation data - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Control 2480019835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Logo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Control Logo2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Action 337631938 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Setup</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Action User Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Action 1292171385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>About Manufacturing Plus</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Action About Manufacturing Plus - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Method 716454850 - NamedType 3492639454" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Manufacturing Plus App license will expire in %1 days. Purchase a license at http://b-a.dk.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Method OnOpenPage - NamedType WarningTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Method 716454850 - NamedType 103052231" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The  Manufacturing Plus App license has expired. Purchase a license at http://b-a.dk.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Method OnOpenPage - NamedType ExpiredWarningTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 536085707 - Method 716454850 - NamedType 1286919902" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Thank you for trying the Manufacturing Plus pack from Bech-Andersen Consult Aps. Your trial period has started and will expire on %1. You can purchase the app from http://b-a.dk or click the link in the About window.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Man. Plus Setup - Method OnOpenPage - NamedType WelcomeTxt</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cross Docking Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 568743302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 2161572060 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Location Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 3450651614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant Code</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Variant Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 1753214751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Source Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 1753214751 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Order,Transfer Order,Production Order</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Source Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 1882905478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Source No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 312545736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Source Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 1920046521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Unit of Measure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 806193894 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Qty. per Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Qty. per Unit of Measure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 1563490804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Base Quatity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Base Quatity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 4085727052 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Due Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Due Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 2363328873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Document Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 2363328873 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase,Production</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Document Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 2579367621 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BAC Cross Docking Line - Field Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3073605424 - Method 4139928701 - NamedType 3492639454" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date of the %1 is before the working date- Continue?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BAC Event Subscriptions - Method IssueWarning - NamedType WarningTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3073605424 - Method 4139928701 - NamedType 2595086109" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Aborted</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BAC Event Subscriptions - Method IssueWarning - NamedType AbortedTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3073605424 - Method 554166351 - NamedType 3492639454" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date of the %1 is before the working date- Continue?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BAC Event Subscriptions - Method IssueLineWarning - NamedType WarningTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3073605424 - Method 554166351 - NamedType 2595086109" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Aborted</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BAC Event Subscriptions - Method IssueLineWarning - NamedType AbortedTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3073605424 - Method 1952268250 - NamedType 103052231" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The  Manufacturing Plus App license has expired. Purchase a license at http://b-a.dk.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit BAC Event Subscriptions - Method CheckLinenseOnAfterLogInStart - NamedType ExpiredWarningTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 864622084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cross Docking</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Cross Docking FactBox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 864622084 - Action 2153707693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Document</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Cross Docking FactBox - Action Open Document - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Availability by Event</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 332802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control ItemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 355498089 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variant Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control VariantFilter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 3267737623 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control LocationFilter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 43593927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View by</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control PeriodType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 43593927 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Day,Week,Month,Quarter,Year</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control PeriodType - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 1362772144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Forecast Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control ForecastName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 721275338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Include Planning Suggestions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control IncludePlanningSuggestions - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 2491936622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Include Blanket Sales Orders</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control IncludeBlanketOrders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Control 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Period</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Control Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Action 2986646893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recalculate</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Action Recalculate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3510837692 - Action 1107476520 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Document</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Item Avail. by Event Part - Action Show Document - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2846530705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>About Manufacturing Plus</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About Manufacturing Plus - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2846530705 - Control 1684721775 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manufacturing Plus Version No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About Manufacturing Plus - Control Version No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2846530705 - Control 1394699940 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Installation date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About Manufacturing Plus - Control Installation Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2846530705 - Control 3142631117 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Expiry Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About Manufacturing Plus - Control Expiry Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2846530705 - Control 511313318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter the e-mail used for the license here</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About Manufacturing Plus - Control License E-mail - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2846530705 - Control 3357837221 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter the license from the email here</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About Manufacturing Plus - Control License - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2846530705 - Action 3258788785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Go to Webshop</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About Manufacturing Plus - Action Go to Webshop - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2846530705 - Action 3258788785 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Go to webshop to purchase Manufacturing Plus license</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC About Manufacturing Plus - Action Go to Webshop - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1445151498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Manufacturing Plus Logo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BAC Logo FactBox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prod. Order - Final Costing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - ReportLabel 811331190" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exp. Qty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - ReportLabel ExpectedQtyTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - ReportLabel 2128760661" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Realized Cons. Qty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - ReportLabel RealizedConsumptionQtyCap</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - ReportLabel 3891569721" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Realized Cons. Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - ReportLabel RealizedConsumptionAmtCap</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - ReportLabel 2038802309" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Realized Time Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - ReportLabel RealizedTimeAmountCap</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - ReportLabel 4032070037" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Realized Time Qty</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - ReportLabel RealizedTimeQtyCap</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 947140346" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prod. Order - Final Costing</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType ProdOrderDetailedCalcCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 684809554" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Page</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType CurrReportPageNoCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 3159124898" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Production Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType TotalProductionCostCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 1833557762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Material Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType TotalMaterialCostCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 3542044504" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Production Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType TotalProdCostCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 2249874505" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Material Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType TotalMterlCostCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 1157506943" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType TotalCostCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 3757883827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Single-Level Mfg. Overhead Cost</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType SingleLevelMfgOvhdCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2046162138 - NamedType 4024887265" size-unit="char" translate="yes" xml:space="preserve">
+          <source>* The cost of the sub assembly component origins from the item card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report BAC Prod. Order Final Costing - NamedType SubAssemblyItemTxt</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 50102710 - Control 3714901623 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1211261581">
+          <source>BOM Version Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Production BOM Ext - Control ProdBomVersionLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 829657066 - Control 4011919596 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 518114792">
+          <source>BOM Version Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Production Routing Ext - Control RoutingVersionLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 38811548 - Control 2069213572 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Over/Under Delivery</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Item Card Ext - Control OverUnderDelivery2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2508640647 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3698582500">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Rel. Prod. Order Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3555617532 - Action 1924145123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3144460829">
+          <source>Select All</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Planning WS Ext - Action Select All - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3555617532 - Action 3340327436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3144460829">
+          <source>Deselect All</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Planning WS Ext - Action Deselect All - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2954565837 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3365016562">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Prod Planner RC Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2954565837 - Action 3208463977 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3365016562">
+          <source>Consumption Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Prod Planner RC Ext - Action Consumption Journals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2954565837 - Action 1628998055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3365016562">
+          <source>Output Journals</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Prod Planner RC Ext - Action Output Journals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2954565837 - Action 2744573357 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3365016562">
+          <source>Test Webservice</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Prod Planner RC Ext - Action Test Webservice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3959516207 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 314832254">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Machine Oper RC Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2703813047 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1760859669">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Shop Super RC Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2061076381 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178189477">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Shop Super F RC Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2376637460 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2972308613">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Released Prod Orders Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3473417494 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1631347747">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Planned Prod Order Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3591775339 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1548000686">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Planned Prod Orders Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 413312967 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1245108215">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Firm Plan Prod Order Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4244689594 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3830228482">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Firm Plan Prod Orders Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1410188606 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 40725609">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Fininshed Prod Order Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3558956147 - Action 1600348163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2996256832">
+          <source>Final Costing Report</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Fininshed Prod Orders Ext - Action Final Costing Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2369174753 - Control 3722618089 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4125768950">
+          <source>Production Orders Finished not Finalized</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Manufacturing Act Ext - Control Production Orders Finished not Finalized - Property caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2680927963 - Action 1924145123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2459894850">
+          <source>Select All</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Requisition WS Ext - Action Select All - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2680927963 - Action 3340327436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2459894850">
+          <source>Deselect All</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension BAC Requisition WS Ext - Action Deselect All - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 345709316 - Field 335877256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 494646383">
+          <source>Production BOM No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Stockkeeping Unit Card Ext - Field BAC Production BOM No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 345709316 - Field 1483178813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 494646383">
+          <source>Routing No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Stockkeeping Unit Card Ext - Field BAC Routing No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 345709316 - Field 2407375006 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 494646383">
+          <source>Prod. BOM Version No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Stockkeeping Unit Card Ext - Field BAC Prod. BOM Version No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 345709316 - Field 3904566763 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 494646383">
+          <source>Routing Version No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Stockkeeping Unit Card Ext - Field BAC Routing Version No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1045832792 - Field 3979446162 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Prod. Order No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Line Ext - Field BAC Prod. Order No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1045832792 - Field 2450022460 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Prod. Order Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Line Ext - Field BAC Prod. Order Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1045832792 - Field 2450022460 - Method 2126772001 - NamedType 2416573920" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>%1 on %2 %3 %4 %5 is %6, do you want to insert that to the line?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Line Ext - Field BAC Prod. Order Line No. - Method OnValidate - NamedType AskBeforeReplaceTxt</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1045832792 - Field 2337022543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Work Center No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Line Ext - Field BAC Work Center No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1045832792 - Field 2572303766 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Qty. To Receive</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Line Ext - Field BAC Qty. To Receive - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1045832792 - Field 2572303766 - Method 2126772001 - NamedType 226611198" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>The maximum %1 that can be received is %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Line Ext - Field BAC Qty. To Receive - Method OnValidate - NamedType ErrorOverDeliveryTxt</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1045832792 - Field 2572303766 - Method 2126772001 - NamedType 4066583420" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Is this the final delivery? \Answering yes, the Quantity on %1 the adjusted to %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Line Ext - Field BAC Qty. To Receive - Method OnValidate - NamedType FinalDeliveryTxt</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1045832792 - Field 2240487837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Original Qty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Line Ext - Field BAC Original Qty. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3065960649 - Field 1641377845 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Qty. To Ship</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Line Ext - Field BAC Qty. To Ship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3065960649 - Field 1641377845 - Method 2126772001 - NamedType 226611198" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>The maximum %1 that can be Shipped is %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Line Ext - Field BAC Qty. To Ship - Method OnValidate - NamedType ErrorOverDeliveryTxt</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3065960649 - Field 1641377845 - Method 2126772001 - NamedType 4066583420" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Is this the final delivery? \Answering yes, the Quantity on %1 the adjusted to %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Line Ext - Field BAC Qty. To Ship - Method OnValidate - NamedType FinalDeliveryTxt</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3065960649 - Field 2240487837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Original Qty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Line Ext - Field BAC Original Qty. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3191746800 - Field 2818650365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Block Over Delivery</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Item Ext - Field BAC Block Over Delivery - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3191746800 - Field 2273190879 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Block Under Delivery</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Item Ext - Field BAC Block Under Delivery - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3191746800 - Field 947507343 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Creation Date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Item Ext - Field BAC Creation Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3191746800 - Field 1445403661 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Created By</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Item Ext - Field BAC Created By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3191746800 - Field 976647220 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Hello World</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Item Ext - Field BAC Hello World - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 63224706 - Field 2559005281 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2308244223">
+          <source>Remaining Quantity</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Prod Order Ext - Field BAC Remaining Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1369267214 - Field 3522707405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3484748181">
+          <source>Prod. Orders not Finalized</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Manufacturing Cue Ext - Field BAC Prod. Orders not Final - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1159866777 - Field 1730762118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3335635432">
+          <source>Version Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Prod BOM Header Ext - Field BAC Version Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1334283918 - Field 1730762118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 719348885">
+          <source>Version Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Routing Header Ext - Field BAC Version Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3444759378 - Field 2239711550 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Internal Sales Person</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Header Ext - Field BAC Internal Sales Person - Property caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3444759378 - Method 136627926 - NamedType 848472796" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>No User Setup exist for user %1 with a %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Header Ext - Method OnAfterInsert - NamedType ErrorTxt</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 478646241 - Field 2239711550 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Internal Sales Person</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Inv Header Ext - Field BAC Internal Sales Person - Property caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 74159926 - Field 2239711550 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Internal Sales Person</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Cr. M. Header Ext - Field BAC Internal Sales Person - Property caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 381111594 - Field 2239711550 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Internal Sales Person</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Sales Header Arch Ext - Field BAC Internal Sales Person - Property caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1470100239 - Field 4081618802 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Internal Purchaser</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Header Ext - Field BAC Internal Purchaser - Property caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1470100239 - Method 136627926 - NamedType 848472796" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>No User Setup exist for user %1 with a %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Header Ext - Method OnAfterInsert - NamedType ErrorTxt</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 53356240 - Field 4081618802 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Internal Purchaser</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Inv Header Ext - Field BAC Internal Purchaser - Property caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2945391707 - Field 4081618802 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Internal Purchaser</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Cr. M. Header Ext - Field BAC Internal Purchaser - Property caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2094913103 - Field 4081618802 - Property 3830149458" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Internal Purchaser</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Purchase Header Arch Ext - Field BAC Internal Purchaser - Property caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1201535077 - Field 335877256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 397414134">
+          <source>Production BOM No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Variant Code Ext - Field BAC Production BOM No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1201535077 - Field 1483178813 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 397414134">
+          <source>Routing No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Variant Code Ext - Field BAC Routing No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1201535077 - Field 2407375006 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 397414134">
+          <source>Prod. BOM Version No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Variant Code Ext - Field BAC Prod. BOM Version No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1201535077 - Field 3904566763 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 397414134">
+          <source>Routing Version No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension BAC Variant Code Ext - Field BAC Routing Version No. - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
