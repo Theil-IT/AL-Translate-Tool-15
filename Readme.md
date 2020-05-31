@@ -13,3 +13,6 @@ Statistics on projects
 Added User Access
 Added Role Center and Activities
 Replaced "BAC Translation Project Name" with "BAC Translation Project"
+Changed Import Translation XML port to handle al-object-target occasionally
+Changed Export Translation XML port to correct tag name for source-language
+Added fields to Source and Target al-object-target

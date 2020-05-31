@@ -77,7 +77,12 @@ table 78602 "BAC Translation Target"
             DataClassification = AccountData;
             Caption = 'Max Width';
         }
-        field(120; "Occurrencies"; Integer)
+        field(120; "al-object-target"; Text[100])
+        {
+            DataClassification = AccountData;
+            Caption = 'al-object-target';
+        }
+        field(130; "Occurrencies"; Integer)
         {
             Caption = 'Occurrencies';
             FieldClass = FlowField;

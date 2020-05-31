@@ -84,13 +84,21 @@ xmlport 78602 "BAC Import Translation Target"
                                     Target.TranslateAttr := translate;
                                 end;
                             }
-
+                            textattribute("al-object-target")
+                            {
+                                Occurrence = Optional;
+                                trigger OnAfterAssignVariable()
+                                begin
+                                    target."al-object-target" := "al-object-target";
+                                end;
+                            }
                             fieldelement(source; Target.Source)
                             {
                             }
 
                             textelement(note)
                             {
+                                XmlName='note';
                                 textattribute(from)
                                 {
                                     trigger OnAfterAssignVariable()

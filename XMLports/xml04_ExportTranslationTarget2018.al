@@ -89,6 +89,14 @@ xmlport 78604 "BAC Export Trans Target 2018"
                                     translate := Target.TranslateAttr;
                                 end;
                             }
+                            textattribute("al-object-target")
+                            {
+                                Occurrence = Optional;
+                                trigger OnAfterAssignVariable()
+                                begin
+                                    target."al-object-target" := "al-object-target";
+                                end;
+                            }
                             fieldelement(Source; Target.Source)
                             {
                                 XmlName = 'source';

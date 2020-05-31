@@ -25,11 +25,43 @@ page 78601 "BAC Translation Source List"
         {
             part(TransNotes; "BAC Translation Notes")
             {
-                SubPageLink = "Project Code" = field ("Project Code"),
-                            "Trans-Unit Id" = field ("Trans-Unit Id");
-                ApplicationArea=All;
+                SubPageLink = "Project Code" = field("Project Code"),
+                            "Trans-Unit Id" = field("Trans-Unit Id");
+                ApplicationArea = All;
             }
 
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action("Show Empty Captions")
+            {
+                Caption = 'Show Empty Captions';
+                ApplicationArea = All;
+                Image = ShowSelected;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                trigger OnAction()
+                begin
+                    SetRange(Source, '');
+                end;
+            }
+            action("Show All Captions")
+            {
+                Caption = 'Show All Captions';
+                ApplicationArea = All;
+                Image = ShowList;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                trigger OnAction()
+                begin
+                    SetRange(Source);
+                end;
+            }
         }
     }
 }
