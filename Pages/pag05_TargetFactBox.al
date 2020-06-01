@@ -45,7 +45,7 @@ page 78605 "BAC Trans Target Factbox"
         TotalMissingCaptions: Integer;
         TotalMissingTranslations: Integer;
 
-    trigger OnOpenPage()
+    trigger OnAfterGetCurrRecord()
     var
         Target: Record "BAC Translation Target";
     begin

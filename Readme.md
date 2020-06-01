@@ -4,9 +4,6 @@ Blog: https://dynamicsuser.net/nav/b/peik
 
 # To Do 
 Statistics on projects 
-- Total captions
-- Total Not translated captions
-- Total missing captions
 - Default Target language in Setup
 
 # 29-05-2020

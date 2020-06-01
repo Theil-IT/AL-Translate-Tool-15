@@ -9,9 +9,15 @@ page 78601 "BAC Translation Source List"
         {
             repeater(GroupName)
             {
+                field("Field Name";"Field Name")
+                {
+                    ApplicationArea = All;
+
+                }
                 field("Trans-Unit Id"; "Trans-Unit Id")
                 {
                     ApplicationArea = All;
+                    Visible=false;
 
                 }
                 field(Source; Source)

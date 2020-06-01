@@ -51,11 +51,20 @@ table 78601 "BAC Translation Source"
             DataClassification = AccountData;
             Caption = 'al-object-target';
         }
+        field(140; "Field Name"; Text[250])
+        {
+            Caption = 'Field Name';
+            FieldClass = FlowField;
+            CalcFormula = lookup ("BAC Translation Notes".Note where("Project Code" = field("Project Code"),
+                                                             "Trans-Unit Id" = field("Trans-Unit Id"),
+                                                             From = const('Xliff Generator')));
+
+        }
     }
 
     keys
     {
-        key(PK; "Project Code", "Line No.")
+        key(PK; "Project Code", "Trans-Unit Id")
         {
             Clustered = true;
         }

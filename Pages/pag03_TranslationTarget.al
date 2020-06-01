@@ -11,11 +11,18 @@ page 78603 "BAC Translation Target List"
         {
             repeater(GroupName)
             {
+                field("Field Name"; "Field Name")
+                {
+                    ApplicationArea = All;
+
+                }
                 field("Trans-Unit Id"; "Trans-Unit Id")
                 {
                     ApplicationArea = All;
                     Visible = false;
+
                 }
+
                 field(Source; Source)
                 {
                     ApplicationArea = All;
@@ -221,6 +228,23 @@ page 78603 "BAC Translation Target List"
                 end;
 
             }
+            action("Find Duplicates")
+            {
+                Caption = 'Find Duplicates';
+                Image = Find;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    FindDuplicatesTxt: Label 'Find Duplicates?';
+                begin
+                    if Confirm(FindDuplicatesTxt) then
+                        FindDuplicates();
+                end;
+            }
         }
     }
     var
@@ -340,5 +364,31 @@ page 78603 "BAC Translation Target List"
             until TransTerm.Next() = 0;
         if not Found then
             outTarget := inTarget;
+    end;
+
+    local procedure FindDuplicates()
+    var
+        TransTarget: Record "BAC Translation Target";
+        TransTargetDup: Record "BAC Translation Target";
+        TransTargetTrans: Record "BAC Translation Target";
+        Counter: Integer;
+        FinishedTxt: Label '%1 Duplicate captions found';
+    begin
+        TransTarget.CopyFilters(Rec);
+        TransTarget.SetRange(Target, '');
+        if TransTarget.FindSet() then
+            repeat
+                TransTargetTrans.CopyFilters(Rec);
+                TransTargetTrans.SetRange(Source, TransTarget.Source);
+                TransTargetTrans.SetFilter(Target, '<>%1', '');
+                if TransTargetTrans.FindFirst() then begin
+                    TransTargetDup.CopyFilters(Rec);
+                    TransTargetDup.SetRange(Source, TransTarget.Source);
+                    TransTargetDup.SetRange(Target, '');
+                    TransTargetDup.ModifyAll(Target, TransTargetTrans.Target);
+                    Counter += 1;
+                end;
+            until TransTarget.Next() = 0;
+        message(FinishedTxt, Counter);
     end;
 }

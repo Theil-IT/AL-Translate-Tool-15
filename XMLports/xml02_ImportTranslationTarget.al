@@ -10,6 +10,7 @@ xmlport 78602 "BAC Import Translation Target"
     UseDefaultNamespace = true;
     UseRequestPage = false;
 
+
     schema
     {
         textelement(xliff)
@@ -66,6 +67,7 @@ xmlport 78602 "BAC Import Translation Target"
                         {
                             XmlName = 'trans-unit';
                             AutoReplace = true;
+                            AutoSave = true;
 
                             fieldattribute(id; Target."Trans-Unit Id")
                             {
@@ -98,7 +100,7 @@ xmlport 78602 "BAC Import Translation Target"
 
                             textelement(note)
                             {
-                                XmlName='note';
+                                XmlName = 'note';
                                 textattribute(from)
                                 {
                                     trigger OnAfterAssignVariable()
