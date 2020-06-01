@@ -95,15 +95,17 @@ page 78600 "BAC Trans Project List"
                             begin
                                 ImportSourceXML.SetProjectCode(Rec."Project Code");
                                 ImportSourceXML.Run();
+                                Success := ImportSourceXML.FileImported()
                             end;
                         "NAV Version"::"Dynamics NAV 2018":
                             begin
                                 ImportSource2018XML.SetProjectCode(Rec."Project Code");
                                 ImportSource2018XML.Run();
+                                Success := ImportSource2018XML.FileImported()
                             end;
                     end;
                     TransProject.Get("Project Code");
-                    if (TransProject."File Name" <> '') then
+                    if (TransProject."File Name" <> '') and Success then
                         message(ImportedTxt, TransProject."File Name", "Project Code");
                 end;
             }
@@ -133,6 +135,9 @@ page 78600 "BAC Trans Project List"
             }
         }
     }
+    var
+        Success: Boolean;
+
     trigger OnOpenPage()
     var
         UserAccess: Record "BAC User Access";

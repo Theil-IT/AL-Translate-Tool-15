@@ -70,6 +70,7 @@ xmlport 78600 "BAC Import Translation Source"
                         tableelement(Source; "BAC Translation Source")
                         {
                             XmlName = 'trans-unit';
+                            AutoReplace = true;
 
                             fieldattribute(id; Source."Trans-Unit Id")
                             {
@@ -107,6 +108,7 @@ xmlport 78600 "BAC Import Translation Source"
 
                             textelement(note)
                             {
+                                XmlName = 'note';
                                 textattribute(from)
                                 {
                                     trigger OnAfterAssignVariable()
@@ -141,6 +143,11 @@ xmlport 78600 "BAC Import Translation Source"
                                 Source."Project Code" := ProjectCode;
                             end;
 
+                            trigger OnAfterInsertRecord()
+                            begin
+                                if not XMLImported then
+                                    XMLImported := true;
+                            end;
                         }
                     }
                 }
@@ -153,6 +160,7 @@ xmlport 78600 "BAC Import Translation Source"
         MissingProjNameTxt: Label 'Project Name is Missing';
         TransNotes: Record "BAC Translation Notes";
         TransProject: Record "BAC Translation Project";
+        XMLImported: Boolean;
 
     trigger OnPostXmlPort()
     begin
@@ -180,6 +188,11 @@ xmlport 78600 "BAC Import Translation Source"
             if TransNotes.Insert() then;
             clear(TransNotes);
         end;
+    end;
+
+    procedure FileImported(): Boolean
+    begin
+        exit(XMLImported);
     end;
 }
 

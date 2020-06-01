@@ -9,7 +9,7 @@ xmlport 78602 "BAC Import Translation Target"
     PreserveWhiteSpace = true;
     UseDefaultNamespace = true;
     UseRequestPage = false;
-
+    UseLax = true;
 
     schema
     {
@@ -42,7 +42,6 @@ xmlport 78602 "BAC Import Translation Target"
                         if TransProject."Source Language ISO code" <> "source-language" then
                             error(WrongSourceLangTxt, TransProject.FieldCaption("Source Language"), TransProject."Source Language ISO code", "source-language");
                     end;
-
                 }
                 textattribute("target-language")
                 {
@@ -65,9 +64,10 @@ xmlport 78602 "BAC Import Translation Target"
                         }
                         tableelement(Target; "BAC Translation Target")
                         {
+                            UseTemporary = true;
+                            AutoSave = true;
                             XmlName = 'trans-unit';
                             AutoReplace = true;
-                            AutoSave = true;
 
                             fieldattribute(id; Target."Trans-Unit Id")
                             {
@@ -94,6 +94,7 @@ xmlport 78602 "BAC Import Translation Target"
                                     target."al-object-target" := "al-object-target";
                                 end;
                             }
+
                             fieldelement(source; Target.Source)
                             {
                             }
@@ -144,6 +145,18 @@ xmlport 78602 "BAC Import Translation Target"
                                 Target."Target Language ISO code" := TargetLangISOCode;
                                 Target."Target Language" := TargetLangCode;
                             end;
+
+                            trigger OnAfterInsertRecord()
+                            var
+                                Target2: Record "BAC Translation Target";
+                            begin
+                                Target2 := Target;
+                                if Target2.Insert() then
+                                    Target2.Modify();
+
+                                if not XMLImported then
+                                    XMLImported := true;
+                            end;
                         }
                     }
                 }
@@ -161,6 +174,7 @@ xmlport 78602 "BAC Import Translation Target"
         TargetLanguage: Record "BAC Target Language";
         TransTarget: Record "BAC Translation Target";
         TransProject: Record "BAC Translation Project";
+        XMLImported: Boolean;
 
     procedure SetProjectCode(inProjectCode: Code[10]; inSourceLangISOCode: text[10]; inTargetLangISOCode: Text[10])
     begin
@@ -175,13 +189,17 @@ xmlport 78602 "BAC Import Translation Target"
     end;
 
     local procedure CreateTranNote()
+    var
+        TransNotes2: Record "BAC Translation Notes";
     begin
         if (TransNotes.From <> '') and
            (TransNotes.Annotates <> '') and
            (TransNotes.Priority <> '') then begin
             TransNotes."Project Code" := ProjectCode;
             TransNotes."Trans-Unit Id" := Target."Trans-Unit Id";
-            if TransNotes.Insert() then;
+            TransNotes2 := TransNotes;
+            if not TransNotes.Insert() then
+                TransNotes2.Modify();
             clear(TransNotes);
         end;
     end;
@@ -189,6 +207,11 @@ xmlport 78602 "BAC Import Translation Target"
     procedure GetFileName(): Text;
     begin
         exit(currXMLport.Filename);
+    end;
+
+    procedure FileImported(): Boolean
+    begin
+        exit(XMLImported);
     end;
 }
 

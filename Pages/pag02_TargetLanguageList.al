@@ -143,20 +143,25 @@ page 78602 "BAC Target Language List"
                             begin
                                 ImportTarget.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
                                 ImportTarget.Run();
+                                Success := ImportTarget.FileImported()
                             end;
                         TransProject."NAV Version"::"Dynamics NAV 2018":
                             begin
                                 ImportTarget2018.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
                                 ImportTarget2018.Run();
+                                Success := ImportTarget2018.FileImported()
                             end;
                     end;
                     FileName := ImportTarget.GetFileName();
                     while (strpos(FileName, '\') > 0) do
                         FileName := copystr(FileName, strpos(FileName, '\') + 1);
-                    message(ImportedTxt, FileName, "Project Code");
+                    if Success then
+                        message(ImportedTxt, FileName, "Project Code");
                 end;
             }
         }
     }
+    var
+        Success: Boolean;
 
 }

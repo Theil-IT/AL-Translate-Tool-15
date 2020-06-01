@@ -103,6 +103,7 @@ xmlport 78605 "BAC Import Trans Target 2018"
 
                             textelement(note)
                             {
+                                XmlName = 'note';
                                 textattribute(from)
                                 {
                                     trigger OnAfterAssignVariable()
@@ -124,11 +125,15 @@ xmlport 78605 "BAC Import Trans Target 2018"
                                         TransNotes.Priority := priority;
                                     end;
                                 }
-                                trigger OnAfterAssignVariable()
-                                begin
-                                    TransNotes.Note := note;
-                                    CreateTranNote();
-                                end;
+                                textattribute(note2)
+                                {
+                                    XmlName = 'note';
+                                    trigger OnAfterAssignVariable()
+                                    begin
+                                        TransNotes.Note := note2;
+                                        CreateTranNote();
+                                    end;
+                                }
                             }
                             fieldelement(target; Target.Target)
                             {
@@ -141,6 +146,12 @@ xmlport 78605 "BAC Import Trans Target 2018"
                                 Target."Project Code" := ProjectCode;
                                 Target."Target Language ISO code" := TargetLangISOCode;
                                 Target."Target Language" := TargetLangCode;
+                            end;
+
+                            trigger OnAfterInsertRecord()
+                            begin
+                                if not XMLImported then
+                                    XMLImported := true;
                             end;
                         }
                     }
@@ -159,6 +170,7 @@ xmlport 78605 "BAC Import Trans Target 2018"
         TargetLanguage: Record "BAC Target Language";
         TransTarget: Record "BAC Translation Target";
         TransProject: Record "BAC Translation Project";
+        XMLImported: Boolean;
 
     procedure SetProjectCode(inProjectCode: Code[10]; inSourceLangISOCode: text[10]; inTargetLangISOCode: Text[10])
     begin
@@ -187,6 +199,11 @@ xmlport 78605 "BAC Import Trans Target 2018"
     procedure GetFileName(): Text;
     begin
         exit(currXMLport.Filename);
+    end;
+
+    procedure FileImported(): Boolean
+    begin
+        exit(XMLImported);
     end;
 }
 

@@ -64,6 +64,7 @@ xmlport 78603 "BAC Import Trans. Source 2018"
                         tableelement(Source; "BAC Translation Source")
                         {
                             XmlName = 'trans-unit';
+                            AutoReplace = true;
 
                             fieldattribute(id; Source."Trans-Unit Id")
                             {
@@ -99,6 +100,7 @@ xmlport 78603 "BAC Import Trans. Source 2018"
 
                             textelement(note)
                             {
+                                XmlName = 'note';
                                 textattribute(from)
                                 {
                                     trigger OnAfterAssignVariable()
@@ -133,6 +135,11 @@ xmlport 78603 "BAC Import Trans. Source 2018"
                                 Source."Project Code" := ProjectCode;
                             end;
 
+                            trigger OnAfterInsertRecord()
+                            begin
+                                if not XMLImported then
+                                    XMLImported := true;
+                            end;
                         }
                     }
                 }
@@ -146,6 +153,7 @@ xmlport 78603 "BAC Import Trans. Source 2018"
         TransNotes: Record "BAC Translation Notes";
         TransProject: Record "BAC Translation Project";
         DummyMaxWidth: Text;
+        XMLImported: Boolean;
 
     trigger OnPostXmlPort()
     begin
@@ -173,6 +181,11 @@ xmlport 78603 "BAC Import Trans. Source 2018"
             if TransNotes.Insert() then;
             clear(TransNotes);
         end;
+    end;
+
+    procedure FileImported(): Boolean
+    begin
+        exit(XMLImported);
     end;
 }
 

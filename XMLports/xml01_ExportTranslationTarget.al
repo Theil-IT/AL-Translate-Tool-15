@@ -101,6 +101,8 @@ xmlport 78601 "BAC Export Translation Target"
 
                             tableelement(note; "BAC Translation Notes")
                             {
+                                UseTemporary = true;
+                                AutoSave = true;
                                 LinkTable = Target;
                                 LinkFields = "Project Code" = field("Project Code"), "Trans-Unit Id" = field("Trans-Unit Id");
 
@@ -118,43 +120,6 @@ xmlport 78601 "BAC Export Translation Target"
 
                                 }
                             }
-
-                            /*textelement(note)
-                            {
-                                trigger OnAfterAssignVariable()
-                                begin
-                                    
-                                end;
-                                   textattribute(from)
-                                    {
-                                        trigger OnBeforePassVariable()
-                                        begin
-                                            from := note.From;
-                                        end;
-                                    }
-                                    textattribute(annotates)
-                                    {
-                                        trigger OnBeforePassVariable()
-                                        begin
-                                            annotates := note.Annotates;
-                                        end;
-                                    }
-                                    textattribute(priority)
-                                    {
-                                        trigger OnBeforePassVariable()
-                                        begin
-                                            priority := note.Priority;
-                                        end;
-
-                                    }
-                                    trigger OnBeforePassField()
-                                    var
-                                        myInt: Integer;
-                                    begin
-                                        note.Note := 'HEllo World';
-                                    end;
-                            }*/
-
                             fieldelement(Target; Target.Target)
                             {
                                 XmlName = 'target';
