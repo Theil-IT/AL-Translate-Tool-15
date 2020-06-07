@@ -9,7 +9,6 @@ table 78602 "BAC Translation Target"
         {
             DataClassification = SystemMetadata;
             Caption = 'Line No.';
-            AutoIncrement = true;
         }
         field(10; "Project Code"; code[10])
         {
@@ -88,13 +87,13 @@ table 78602 "BAC Translation Target"
             FieldClass = FlowField;
             CalcFormula = count ("BAC Translation Target" where(Source = field(Source)));
         }
-        field(140;"Field Name";Text[250])
+        field(140; "Field Name"; Text[250])
         {
-            Caption='Field Name';
-            FieldClass=FlowField;
-            CalcFormula=lookup("BAC Translation Notes".Note where("Project Code"=field("Project Code"),
-                                                             "Trans-Unit Id"=field("Trans-Unit Id"),
-                                                             From=const('Xliff Generator')));
+            Caption = 'Field Name';
+            FieldClass = FlowField;
+            CalcFormula = lookup ("BAC Translation Notes".Note where("Project Code" = field("Project Code"),
+                                                             "Trans-Unit Id" = field("Trans-Unit Id"),
+                                                             From = const('Xliff Generator')));
         }
 
     }
@@ -121,7 +120,7 @@ table 78602 "BAC Translation Target"
             if CurrFieldNo > 0 then
                 if not confirm(QuestionTxt) then
                     exit;
-            TransTarget.SetFilter("Line No.", '<>%1', "Line No.");
+            TransTarget.SetFilter("Trans-Unit Id", '<>%1', "Trans-Unit Id");
             TransTarget.ModifyAll(Target, Target);
             TransTarget.ModifyAll(Translate, false);
         end;

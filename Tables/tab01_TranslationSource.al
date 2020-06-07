@@ -9,7 +9,6 @@ table 78601 "BAC Translation Source"
         {
             DataClassification = SystemMetadata;
             Caption = 'Line No.';
-            AutoIncrement = true;
         }
         field(10; "Project Code"; code[10])
         {

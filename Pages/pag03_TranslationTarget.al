@@ -142,6 +142,19 @@ page 78603 "BAC Translation Target List"
 
                 end;
             }
+            action("Select Empty Translations")
+            {
+                Caption = 'Select Empty Translations';
+                Image = SelectEntries;
+                ApplicationArea = All;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                trigger OnAction()
+                begin
+                    SetRange(Target, '');
+                end;
+            }
             action("Deselect All")
             {
                 ApplicationArea = All;

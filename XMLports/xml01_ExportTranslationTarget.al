@@ -101,8 +101,6 @@ xmlport 78601 "BAC Export Translation Target"
 
                             tableelement(note; "BAC Translation Notes")
                             {
-                                UseTemporary = true;
-                                AutoSave = true;
                                 LinkTable = Target;
                                 LinkFields = "Project Code" = field("Project Code"), "Trans-Unit Id" = field("Trans-Unit Id");
 

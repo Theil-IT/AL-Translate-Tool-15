@@ -151,7 +151,7 @@ xmlport 78602 "BAC Import Translation Target"
                                 Target2: Record "BAC Translation Target";
                             begin
                                 Target2 := Target;
-                                if Target2.Insert() then
+                                if not Target2.Insert() then
                                     Target2.Modify();
 
                                 if not XMLImported then
