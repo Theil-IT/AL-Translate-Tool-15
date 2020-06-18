@@ -258,6 +258,24 @@ page 78603 "BAC Translation Target List"
                         FindDuplicates();
                 end;
             }
+            action("Update From Source")
+            {
+                Caption = 'Update From Source';
+                Image = UpdateXML;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    FindDuplicatesTxt: Label 'Update from Source?';
+                begin
+                    if Confirm(FindDuplicatesTxt) then
+                        UpdateFromSource();
+                end;
+            }
+
         }
     }
     var
@@ -404,4 +422,32 @@ page 78603 "BAC Translation Target List"
             until TransTarget.Next() = 0;
         message(FinishedTxt, Counter);
     end;
+
+    local procedure UpdateFromSource()
+    var
+        TransTarget: Record "BAC Translation Target";
+        TransSource: Record "BAC Translation Source";
+        Counter: Integer;
+        FinishedTxt: Label '%1 Source captions updated';
+    begin
+        TransTarget.Modifyall(Translate, false);
+        if TransSource.FindSet() then
+            repeat
+                TransTarget.SetRange("Project Code", TransSource."Project Code");
+                TransTarget.SetRange("Trans-Unit Id", TransSource."Trans-Unit Id");
+                if TransTarget.FindSet() then
+                    repeat
+                        if TransTarget.Source <> TransSource.Source then begin
+                            TransTarget.Source := TransSource.Source;
+                            TransTarget.Translate := true;
+                            TransTarget.Modify();
+                            Counter += 1;
+                        end;
+                    until TransTarget.Next() = 0;
+            until TransSource.Next() = 0;
+        message(FinishedTxt, Counter);
+
+    end;
+
+
 }
