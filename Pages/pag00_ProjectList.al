@@ -49,12 +49,14 @@ page 78600 "BAC Trans Project List"
                 field("Created By"; "Created By")
                 {
                     ApplicationArea = All;
-
                 }
                 field("Creation Date"; "Creation Date")
                 {
                     ApplicationArea = All;
-
+                }
+                field("Base Translation Imported";"Base Translation Imported")
+                {
+                    ApplicationArea=All;
                 }
             }
         }
@@ -101,7 +103,7 @@ page 78600 "BAC Trans Project List"
                             begin
                                 ImportSource2018XML.SetProjectCode(Rec."Project Code");
                                 ImportSource2018XML.Run();
-                                Success := ImportSource2018XML.FileImported()
+                                Success := ImportSource2018XML.FileImported();
                             end;
                     end;
                     TransProject.Get("Project Code");

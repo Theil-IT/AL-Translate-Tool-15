@@ -159,6 +159,53 @@ page 78602 "BAC Target Language List"
                         message(ImportedTxt, FileName, "Project Code");
                 end;
             }
+            action("Import Base Target")
+            {
+                ApplicationArea = All;
+                Caption = 'Import Base Target';
+                Image = ImportCodes;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    ImportTargetXML: XmlPort "BAC Import Base Trans. Target";
+                    ImportTarget2018XML: XmlPort "BAC Import Base Trans Tgt 2018";
+                    TransSource: Record "BAC Translation Source";
+                    TransNotes: Record "BAC Base Translation Notes";
+                    DeleteWarningTxt: Label 'This will overwrite the Base Translation target for %1';
+                    TransProject: Record "BAC Translation Project";
+                    ImportedTxt: Label 'The file %1 has been imported into project %2';
+                begin
+                    TransSource.SetRange("Project Code", "Project Code");
+                    if not TransSource.IsEmpty then
+                        if Confirm(DeleteWarningTxt, false, "Project Code") then begin
+                            TransSource.DeleteAll();
+                            TransNotes.DeleteAll();
+                        end else
+                            exit;
+                    TransProject.Get("Project Code");
+                    case TransProject."NAV Version" of
+                        TransProject."NAV Version"::"Dynamics 365 Business Central":
+                            begin
+                                ImportTargetXML.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
+                                ImportTargetXML.Run();
+                                Success := ImportTargetXML.FileImported()
+                            end;
+                        TransProject."NAV Version"::"Dynamics NAV 2018":
+                            begin
+                                ImportTarget2018XML.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
+                                ImportTarget2018XML.Run();
+                                Success := ImportTarget2018XML.FileImported();
+                            end;
+                    end;
+                    TransProject.Get("Project Code");
+                    if (TransProject."File Name" <> '') and Success then
+                        message(ImportedTxt, TransProject."File Name", "Project Code");
+                end;
+            }
+
         }
     }
     var

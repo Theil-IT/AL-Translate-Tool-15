@@ -116,6 +116,11 @@ table 78600 "BAC Translation Project"
             OptionMembers = Open,Released,Closed;
             OptionCaption = 'Open,Released,Closed';
         }
+        field(140;"Base Translation Imported";Boolean)
+        {
+            Caption='Base Translation Imported';
+            Editable=false;
+        }
     }
 
     keys

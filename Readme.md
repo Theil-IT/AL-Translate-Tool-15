@@ -13,3 +13,6 @@ Replaced "BAC Translation Project Name" with "BAC Translation Project"
 Changed Import Translation XML port to handle al-object-target occasionally
 Changed Export Translation XML port to correct tag name for source-language
 Added fields to Source and Target al-object-target
+
+# 05-07-2020
+Enabled importing Base Application Translation Target
