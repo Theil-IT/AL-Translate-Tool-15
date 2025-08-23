@@ -85,15 +85,15 @@ page 78603 "BAC Translation Target List"
 
                 trigger OnAction();
                 var
-                    GoogleTranslate: Codeunit "BAC Google Translate Rest";
+                    Translater: Codeunit "BAC Translate Dispatcher";
                     Project: Record "BAC Translation Project";
                 begin
-                    Project.get("Project Code");
-                    Target := GoogleTranslate.Translate(Project."Source Language ISO code",
-                                              "Target Language ISO code",
-                                              Source);
-                    Target := ReplaceTermInTranslation(Target);
-                    Validate(Target);
+                    Project.get(Rec."Project Code");
+                    Rec.Target := Translater.Translate(Project."Project Code", Project."Source Language ISO code",
+                                              Rec."Target Language ISO code",
+                                              Rec.Source);
+                    Rec.Target := ReplaceTermInTranslation(Rec."Target Language ISO code", Rec.Target);
+                    Rec.Validate(Target);
                 end;
             }
             action("Translate All")
@@ -190,8 +190,8 @@ page 78603 "BAC Translation Target List"
                     TransTarget: Record "BAC Translation Target";
                 begin
                     CurrPage.SetSelectionFilter(TransTarget);
-                    if TransTarget.Count = 1 then
-                        TransTarget.Reset();
+                    //if TransTarget.Count = 1 then
+                    //    TransTarget.Reset();
                     if Confirm(WarningTxt) then
                         TransTarget.ModifyAll(Target, '');
                 end;
@@ -206,7 +206,7 @@ page 78603 "BAC Translation Target List"
                 PromotedCategory = Process;
                 RunObject = page "BAC Translation terms";
                 RunPageLink = "Project Code" = field("Project Code"),
-                            "Target Language" = field("Target Language");
+                            "Target Language" = field("Target Language ISO code");
             }
             action("Export Translation File")
             {
@@ -290,7 +290,7 @@ page 78603 "BAC Translation Target List"
         TransSetup: Record "BAC Translation Setup";
     begin
         TransSetup.get();
-        ShowTranslate := TransSetup."Use Free Google Translate";
+        ShowTranslate := TransSetup."Use Free Google Translate" or TransSetup."Use ChatGPT";
 
         TransSource.SetFilter("Project Code", GetFilter("Project Code"));
         if TransSource.FindSet() then
@@ -304,7 +304,7 @@ page 78603 "BAC Translation Target List"
 
     local procedure TranslateAll(inOnlyEmpty: Boolean)
     var
-        GoogleTranslate: Codeunit "BAC Google Translate Rest";
+        Translater: Codeunit "BAC Translate Dispatcher";
         TransTarget: Record "BAC Translation Target";
         TransTarget2: Record "BAC Translation Target";
         Project: Record "BAC Translation Project";
@@ -312,35 +312,42 @@ page 78603 "BAC Translation Target List"
         DialogTxt: Label 'Converting #1###### of #2######';
         Counter: Integer;
         TotalCount: Integer;
+        EscapedSource: Text;
     begin
+        Project.Get(Rec."Project Code");
         if inOnlyEmpty then
             TransTarget.SetRange(Target, '');
         TransTarget.SetRange(Translate, true);
-        TransTarget.SetRange("Project Code", "Project Code");
-        Project.get("Project Code");
+        TransTarget.SetRange("Project Code", Project."Project Code");
+        TransTarget.SetRange("Target Language ISO code", Rec."Target Language ISO code");
+
         TotalCount := TransTarget.Count;
         Window.Open(DialogTxt);
+
+        // First pass: Occurrencies = 1
         TransTarget.SetRange(Occurrencies, 1);
         if TransTarget.FindSet() then begin
             repeat
                 Counter += 1;
                 Window.Update(1, Counter);
                 Window.Update(2, TotalCount);
-                TransTarget.Target := GoogleTranslate.Translate(Project."Source Language ISO code",
-                                          "Target Language ISO code",
+                TransTarget.Target := Translater.Translate(Project."Project Code", Project."Source Language ISO code",
+                                          Rec."Target Language ISO code",
                                           TransTarget.Source);
-                TransTarget.Target := ReplaceTermInTranslation(TransTarget.Target);
+                TransTarget.Target := ReplaceTermInTranslation(Rec."Target Language ISO code", TransTarget.Target);
                 TransTarget.Translate := false;
                 TransTarget.Modify();
-                commit();
+                Commit();
             until TransTarget.Next() = 0;
         end;
-        // To avoid the Sorry message (Another user has change the record)
+
+        // Reset for second pass
         TransTarget.Reset();
         if inOnlyEmpty then
             TransTarget.SetRange(Target, '');
         TransTarget.SetRange(Translate, true);
-        TransTarget.SetRange("Project Code", "Project Code");
+        TransTarget.SetRange("Project Code", Project."Project Code");
+        TransTarget.SetRange("Target Language ISO code", Rec."Target Language ISO code");
         TransTarget.SetCurrentKey(Source);
         TransTarget.SetFilter(Occurrencies, '>1');
         if TransTarget.FindSet() then begin
@@ -348,30 +355,45 @@ page 78603 "BAC Translation Target List"
                 Counter += 1;
                 Window.Update(1, Counter);
                 Window.Update(2, TotalCount);
-                TransTarget.Target := GoogleTranslate.Translate(Project."Source Language ISO code",
-                                          "Target Language ISO code",
-                                          TransTarget.Source);
-                TransTarget.Target := ReplaceTermInTranslation(TransTarget.Target);
-                TransTarget2.SetFilter(Source, TransTarget.Source);
+                TransTarget.Target := Translater.Translate(Project."Project Code", Project."Source Language ISO code",
+                                              Rec."Target Language ISO code",
+                                              TransTarget.Source);
+                TransTarget.Target := ReplaceTermInTranslation(Rec."Target Language ISO code", TransTarget.Target);
+
+                // Escape only for TransTarget2
+                EscapedSource := StrSubstNo('''%1''', TransTarget.Source.Replace('''', ''''''));
+                TransTarget2.SetFilter(Source, EscapedSource);
+                TransTarget2.SetFilter("Target Language ISO code", Rec."Target Language ISO code");
                 TransTarget2.ModifyAll(Target, TransTarget.Target);
-                TransTarget.ModifyAll(Translate, false);
-                commit();
+
+                // Mark all as not needing translate
+                TransTarget2.ModifyAll(Translate, false);
+
+                Commit();
                 SelectLatestVersion();
+
+                // Use raw value here
                 TransTarget.SetFilter(Source, '<>%1', TransTarget.Source);
-            until TransTarget.Next() = 0;
+            until TransTarget.FindSet() = false;
         end;
 
+        Window.Close();
     end;
 
-    local procedure ReplaceTermInTranslation(inTarget: Text[250]) outTarget: Text[250]
+
+    // This does the post-translation replacement of terms
+    local procedure ReplaceTermInTranslation(TargetLanguageIsoCode: Text[10]; inTarget: Text[250]) outTarget: Text[250]
     var
         TransTerm: Record "BAC Translation Term";
         StartPos: Integer;
         StartLetterIsUppercase: Boolean;
         Found: Boolean;
     begin
+        TransTerm.SetRange("Project Code", Rec."Project Code");
         if TransTerm.FindSet() then
             repeat
+                if TransTerm."Apply Pre-Translation" then
+                    continue; // Skip terms that are marked for pre-translation only
                 StartPos := strpos(LowerCase(inTarget), LowerCase(TransTerm.Term));
                 if StartPos > 0 then begin
                     StartLetterIsUppercase := copystr(inTarget, StartPos, 1) = uppercase(copystr(inTarget, StartPos, 1));
@@ -428,7 +450,8 @@ page 78603 "BAC Translation Target List"
         TransTarget: Record "BAC Translation Target";
         TransSource: Record "BAC Translation Source";
         Counter: Integer;
-        FinishedTxt: Label '%1 Source captions updated';
+        DeletedCounter: Integer;
+        FinishedTxt: Label '%1 source captions updated. %2 obsolete targets deleted.';
     begin
         TransTarget.Modifyall(Translate, false);
         if TransSource.FindSet() then
@@ -445,7 +468,20 @@ page 78603 "BAC Translation Target List"
                         end;
                     until TransTarget.Next() = 0;
             until TransSource.Next() = 0;
-        message(FinishedTxt, Counter);
+
+
+        // Check for targets that no longer exist in source
+        TransTarget.Reset();
+        if TransTarget.FindSet() then
+            repeat
+                TransSource.SetRange("Project Code", TransTarget."Project Code");
+                TransSource.SetRange("Trans-Unit Id", TransTarget."Trans-Unit Id");
+                if not TransSource.FindFirst() then begin
+                    TransTarget.Delete();
+                    DeletedCounter += 1;
+                end;
+            until TransTarget.Next() = 0;
+        Message(FinishedTxt, Counter, DeletedCounter);
 
     end;
 

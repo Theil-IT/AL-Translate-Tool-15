@@ -1,3 +1,4 @@
+
 page 78602 "BAC Target Language List"
 {
     PageType = List;
@@ -12,29 +13,29 @@ page 78602 "BAC Target Language List"
             repeater(GroupName)
             {
 
-                field("Project Name"; "Project Name")
+                field("Project Name"; Rec."Project Name")
                 {
                     ApplicationArea = All;
                     QuickEntry = false;
 
                 }
-                field("Source Language"; "Source Language")
+                field("Source Language"; Rec."Source Language")
                 {
                     ApplicationArea = All;
                     QuickEntry = false;
 
                 }
-                field("Source Language ISO code"; "Source Language ISO code")
+                field("Source Language ISO code"; Rec."Source Language ISO code")
                 {
                     ApplicationArea = All;
                     QuickEntry = false;
                 }
 
-                field("Target Language"; "Target Language")
+                field("Target Language"; Rec."Target Language")
                 {
                     ApplicationArea = All;
                 }
-                field("Target Language ISO code"; "Target Language ISO code")
+                field("Target Language ISO code"; Rec."Target Language ISO code")
                 {
                     ApplicationArea = All;
                     QuickEntry = false;
@@ -77,7 +78,19 @@ page 78602 "BAC Target Language List"
                 PromotedCategory = Process;
                 RunObject = page "BAC Translation terms";
                 RunPageLink = "Project Code" = field("Project Code"),
-                            "Target Language" = field("Target Language");
+                            "Target Language" = field("Target Language ISO code");
+            }
+            action("Project Terms")
+            {
+                Caption = 'Project Terms';
+                ApplicationArea = All;
+                Image = BeginningText;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                RunObject = page "BAC Translation terms";
+                RunPageLink = "Project Code" = field("Project Code"),
+                            "Target Language" = const('');
             }
             action("Export Translation File")
             {
@@ -96,16 +109,16 @@ page 78602 "BAC Target Language List"
                     TransProject: Record "BAC Translation Project";
                 begin
                     if Confirm(WarningTxt) then begin
-                        TransProject.get("Project Code");
+                        TransProject.get(Rec."Project Code");
                         case TransProject."NAV Version" of
                             TransProject."NAV Version"::"Dynamics 365 Business Central":
                                 begin
-                                    ExportTranslation.SetProjectCode("Project Code", "Source Language ISO code", "Target Language ISO code");
+                                    ExportTranslation.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
                                     ExportTranslation.Run();
                                 end;
                             TransProject."NAV Version"::"Dynamics NAV 2018":
                                 begin
-                                    ExportTranslation2018.SetProjectCode("Project Code", "Source Language ISO code", "Target Language ISO code");
+                                    ExportTranslation2018.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
                                     ExportTranslation2018.Run();
                                 end;
                         end;
@@ -133,21 +146,21 @@ page 78602 "BAC Target Language List"
                     ImportedTxt: Label 'The file %1 has been imported into project %2';
                     FileName: Text;
                 begin
-                    TransTarget.SetRange("Project Code", "Project Code");
+                    TransTarget.SetRange("Project Code", Rec."Project Code");
                     if not TransTarget.IsEmpty then
-                        if not Confirm(DeleteWarningTxt, false, "Project Code") then
+                        if not Confirm(DeleteWarningTxt, false, Rec."Project Code") then
                             exit;
-                    TransProject.get("Project Code");
+                    TransProject.get(Rec."Project Code");
                     case TransProject."NAV Version" of
                         TransProject."NAV Version"::"Dynamics 365 Business Central":
                             begin
-                                ImportTarget.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
+                                ImportTarget.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
                                 ImportTarget.Run();
                                 Success := ImportTarget.FileImported()
                             end;
                         TransProject."NAV Version"::"Dynamics NAV 2018":
                             begin
-                                ImportTarget2018.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
+                                ImportTarget2018.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
                                 ImportTarget2018.Run();
                                 Success := ImportTarget2018.FileImported()
                             end;
@@ -156,7 +169,7 @@ page 78602 "BAC Target Language List"
                     while (strpos(FileName, '\') > 0) do
                         FileName := copystr(FileName, strpos(FileName, '\') + 1);
                     if Success then
-                        message(ImportedTxt, FileName, "Project Code");
+                        message(ImportedTxt, FileName, Rec."Project Code");
                 end;
             }
             action("Import Base Target")
@@ -178,31 +191,31 @@ page 78602 "BAC Target Language List"
                     TransProject: Record "BAC Translation Project";
                     ImportedTxt: Label 'The file %1 has been imported into project %2';
                 begin
-                    TransSource.SetRange("Project Code", "Project Code");
+                    TransSource.SetRange("Project Code", Rec."Project Code");
                     if not TransSource.IsEmpty then
-                        if Confirm(DeleteWarningTxt, false, "Project Code") then begin
+                        if Confirm(DeleteWarningTxt, false, Rec."Project Code") then begin
                             TransSource.DeleteAll();
                             TransNotes.DeleteAll();
                         end else
                             exit;
-                    TransProject.Get("Project Code");
+                    TransProject.Get(Rec."Project Code");
                     case TransProject."NAV Version" of
                         TransProject."NAV Version"::"Dynamics 365 Business Central":
                             begin
-                                ImportTargetXML.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
+                                ImportTargetXML.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
                                 ImportTargetXML.Run();
                                 Success := ImportTargetXML.FileImported()
                             end;
                         TransProject."NAV Version"::"Dynamics NAV 2018":
                             begin
-                                ImportTarget2018XML.SetProjectCode(Rec."Project Code", "Source Language ISO code", "Target Language ISO code");
+                                ImportTarget2018XML.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
                                 ImportTarget2018XML.Run();
                                 Success := ImportTarget2018XML.FileImported();
                             end;
                     end;
-                    TransProject.Get("Project Code");
+                    TransProject.Get(Rec."Project Code");
                     if (TransProject."File Name" <> '') and Success then
-                        message(ImportedTxt, TransProject."File Name", "Project Code");
+                        message(ImportedTxt, TransProject."File Name", Rec."Project Code");
                 end;
             }
 
@@ -212,3 +225,4 @@ page 78602 "BAC Target Language List"
         Success: Boolean;
 
 }
+#pragma implicitwith restore

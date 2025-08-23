@@ -1,20 +1,33 @@
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Your own server",
-            "type": "al",
-            "request": "launch",
-            "server": "http://localhost",
-            "serverInstance": "BC150",
-            "authentication": "Windows",
-            "breakOnError": true,
-            "breakOnRecordWrite": false,
-            "launchBrowser": true,
-            "enableSqlInformationDebugger": true,
-            "enableLongRunningSqlStatements": true,
-            "longRunningSqlStatementsThreshold": 500,
-            "numberOfSqlStatements": 10
+         {
+            "type":  "al",
+            "request":  "launch",
+            "name":  "Local Sandbox (bcprestadev)",
+            "server":  "http://bcprestadev",
+            "serverInstance":  "BC",
+            "breakOnRecordWrite": "None",
+            "breakOnError": "None",
+            "port":  7049,
+            "tenant":  "default",
+            "authentication":  "UserPassword",
+            "schemaUpdateMode": "ForceSync",
+            "dependencyPublishingOption": "Default"
+        },
+         {
+            "type":  "al",
+            "request":  "launch",
+            "name":  "Local Sandbox (bc26dev)",
+            "server":  "http://bc26dev",
+            "serverInstance":  "BC",
+            "breakOnRecordWrite": "None",
+            "breakOnError": "None",
+            "port":  7049,
+            "tenant":  "default",
+            "authentication":  "UserPassword",
+            "schemaUpdateMode": "ForceSync",
+            "dependencyPublishingOption": "Default"
         },
         {
             "name": "Translate Server",

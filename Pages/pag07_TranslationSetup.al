@@ -30,6 +30,12 @@ page 78607 "BAC Translation Setup"
                     ToolTip = 'Use the free Google API for translation. The limitation is that it is only possible to access the API a limited number of times each hour.';
                 }
 
+
+                field("Use ChatGPT"; Rec."Use ChatGPT") { }
+                field("ChatGPT API Key"; Rec."ChatGPT API Key") { }
+                field("ChatGPT Model"; Rec."ChatGPT Model") { }
+
+
             }
             group(Numbering)
             {
@@ -45,7 +51,7 @@ page 78607 "BAC Translation Setup"
         {
             part(Logo; "BAC AL Logo FactBox")
             {
-                ApplicationArea=All;
+                ApplicationArea = All;
             }
         }
     }
@@ -61,7 +67,7 @@ page 78607 "BAC Translation Setup"
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;
-                ApplicationArea=All;
+                ApplicationArea = All;
             }
 
         }

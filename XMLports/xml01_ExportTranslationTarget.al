@@ -98,6 +98,10 @@ xmlport 78601 "BAC Export Translation Target"
                             {
                                 XmlName = 'source';
                             }
+                            fieldelement(Target; Target.Target)
+                            {
+                                XmlName = 'target';
+                            }
 
                             tableelement(note; "BAC Translation Notes")
                             {
@@ -118,10 +122,7 @@ xmlport 78601 "BAC Export Translation Target"
 
                                 }
                             }
-                            fieldelement(Target; Target.Target)
-                            {
-                                XmlName = 'target';
-                            }
+
                         }
                     }
                 }

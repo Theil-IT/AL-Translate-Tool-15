@@ -99,7 +99,21 @@ xmlport 78602 "BAC Import Translation Target"
                             {
                             }
 
-                            textelement(note)
+
+                            fieldelement(target; Target.Target)
+                            {
+                                textattribute(state)
+                                {
+                                    Occurrence = Optional;
+                                    trigger OnAfterAssignVariable()
+                                    begin
+                                        // Optionally store if you want; otherwise ignore
+                                    end;
+                                }
+                            }
+
+                            // Each <note> element in XLIFF will be handled individually
+                            textelement(note2)
                             {
                                 XmlName = 'note';
                                 textattribute(from)
@@ -123,19 +137,14 @@ xmlport 78602 "BAC Import Translation Target"
                                         TransNotes.Priority := priority;
                                     end;
                                 }
-                                textattribute(note2)
-                                {
-                                    XmlName = 'note';
-                                    trigger OnAfterAssignVariable()
-                                    begin
-                                        TransNotes.Note := note2;
-                                        CreateTranNote();
-                                    end;
-                                }
+                                // This handles the text content inside <note>...</note>
+                                trigger OnAfterAssignVariable()
+                                begin
+                                    TransNotes.Note := note2;
+                                    CreateTranNote();
+                                end;
                             }
-                            fieldelement(target; Target.Target)
-                            {
-                            }
+
 
                             trigger OnBeforeInsertRecord()
                             begin

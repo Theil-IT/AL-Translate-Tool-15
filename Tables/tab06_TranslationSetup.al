@@ -34,6 +34,26 @@ table 78606 "BAC Translation Setup"
             DataClassification = SystemMetadata;
             Caption = 'Logo';
         }
+
+        field(60; "Use ChatGPT"; Boolean)
+        {
+            Caption = 'Use ChatGPT';
+            DataClassification = SystemMetadata;
+        }
+
+        field(70; "ChatGPT API Key"; Text[512])
+        {
+            Caption = 'OpenAI API Key';
+            DataClassification = SystemMetadata;
+        }
+
+        field(80; "ChatGPT Model"; Option)
+        {
+            Caption = 'ChatGPT Model';
+            OptionMembers = "gpt-3.5-turbo","gpt-4o";
+
+            DataClassification = SystemMetadata;
+        }
     }
 
     keys

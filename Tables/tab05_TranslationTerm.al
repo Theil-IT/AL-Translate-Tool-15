@@ -32,6 +32,11 @@ table 78605 "BAC Translation Term"
             DataClassification = AccountData;
             Caption = 'Translation';
         }
+        field(60; "Apply Pre-Translation"; Boolean)
+        {
+            DataClassification = AccountData;
+            Caption = 'Apply Pre-Translation';
+        }
     }
 
     keys

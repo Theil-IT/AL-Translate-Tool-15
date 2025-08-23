@@ -1,3 +1,4 @@
+#pragma implicitwith disable
 page 78600 "BAC Trans Project List"
 {
     Caption = 'Translation Projects';
@@ -13,48 +14,48 @@ page 78600 "BAC Trans Project List"
         {
             repeater(GroupName)
             {
-                field("Project Code"; "Project Code")
+                field("Project Code"; Rec."Project Code")
                 {
                     ApplicationArea = All;
                     AssistEdit = true;
                     trigger OnAssistEdit();
                     begin
-                        if AssistEdit then
+                        if Rec.AssistEdit then
                             CurrPage.Update;
                     end;
 
                 }
-                field("Project Name"; "Project Name")
+                field("Project Name"; Rec."Project Name")
                 {
                     ApplicationArea = All;
 
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
                     ApplicationArea = All;
                     ToolTip = 'Open Projects which means projects in process - Released Projects which means sent to customer, but not finished - Finished Projects which means sent to customer and done for now';
                 }
-                field("NAV Version"; "NAV Version")
+                field("NAV Version"; Rec."NAV Version")
                 {
                     ApplicationArea = All;
                 }
-                field("Source Language"; "Source Language")
+                field("Source Language"; Rec."Source Language")
                 {
                     ApplicationArea = All;
                 }
-                field("Source Language ISO code"; "Source Language ISO code")
+                field("Source Language ISO code"; Rec."Source Language ISO code")
                 {
                     ApplicationArea = All;
                 }
-                field("Created By"; "Created By")
+                field("Created By"; Rec."Created By")
                 {
                     ApplicationArea = All;
                 }
-                field("Creation Date"; "Creation Date")
+                field("Creation Date"; Rec."Creation Date")
                 {
                     ApplicationArea = All;
                 }
-                field("Base Translation Imported";"Base Translation Imported")
+                field("Base Translation Imported"; Rec."Base Translation Imported")
                 {
                     ApplicationArea=All;
                 }
@@ -85,30 +86,30 @@ page 78600 "BAC Trans Project List"
                     TransProject: Record "BAC Translation Project";
                     ImportedTxt: Label 'The file %1 has been imported into project %2';
                 begin
-                    TransSource.SetRange("Project Code", "Project Code");
+                    TransSource.SetRange("Project Code", Rec."Project Code");
                     if not TransSource.IsEmpty then
-                        if Confirm(DeleteWarningTxt, false, "Project Code") then begin
+                        if Confirm(DeleteWarningTxt, false, Rec."Project Code") then begin
                             TransSource.DeleteAll();
                             TransNotes.DeleteAll();
                         end else
                             exit;
-                    case "NAV Version" of
-                        "NAV Version"::"Dynamics 365 Business Central":
+                    case Rec."NAV Version" of
+                        Rec."NAV Version"::"Dynamics 365 Business Central":
                             begin
                                 ImportSourceXML.SetProjectCode(Rec."Project Code");
                                 ImportSourceXML.Run();
                                 Success := ImportSourceXML.FileImported()
                             end;
-                        "NAV Version"::"Dynamics NAV 2018":
+                        Rec."NAV Version"::"Dynamics NAV 2018":
                             begin
                                 ImportSource2018XML.SetProjectCode(Rec."Project Code");
                                 ImportSource2018XML.Run();
                                 Success := ImportSource2018XML.FileImported();
                             end;
                     end;
-                    TransProject.Get("Project Code");
+                    TransProject.Get(Rec."Project Code");
                     if (TransProject."File Name" <> '') and Success then
-                        message(ImportedTxt, TransProject."File Name", "Project Code");
+                        message(ImportedTxt, TransProject."File Name", Rec."Project Code");
                 end;
             }
             action("Target Languages")
@@ -154,9 +155,10 @@ page 78600 "BAC Trans Project List"
                     FilterTxt := UserAccess."Project Code";
             until UserAccess.Next() = 0;
         if FilterTxt <> '' then begin
-            FilterGroup(1);
-            SetFilter("Project Code", FilterTxt);
-            FilterGroup(0);
+            Rec.FilterGroup(1);
+            Rec.SetFilter("Project Code", FilterTxt);
+            Rec.FilterGroup(0);
         end;
     end;
 }
+#pragma implicitwith restore
