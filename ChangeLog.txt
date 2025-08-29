@@ -1,9 +1,11 @@
 Change log for the AL Translation Tool:
 
-2025-08-29 : Add support for "Equivalent language" JTH
-2025-08-04 : Add OpenAI API Translation option     JTH
-2025-08-01 : Add support for pre-translate terms   JTH
-2025-08-01 : Update to BC26
+2025-08-29 : Update to version 16   JTH
+                Update to BC26
+                Add support for "Equivalent language" 
+                Add OpenAI API Translation option     
+                Add support for pre-translate terms   
+                Add support for exporting complete project twith all language files 
 
 
 2019-07-02 Released the first Beta. PBA

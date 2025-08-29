@@ -158,6 +158,12 @@ xmlport 78601 "BAC Export Translation Target"
                                      TargetLanguage + '.xlif';
     end;
 
+    procedure GetFilename(): Text
+    begin
+        exit(currXMLport.Filename);
+    end;
+
+ 
     procedure SetProjectCode(inProjectCode: Code[10]; InSourceLang: Text[10]; InTargetLang: Text[10])
     begin
         SetProjectCode(inProjectCode, InSourceLang, InTargetLang, '');
@@ -165,6 +171,7 @@ xmlport 78601 "BAC Export Translation Target"
 
     procedure SetProjectCode(inProjectCode: Code[10]; InSourceLang: Text[10]; InTargetLang: Text[10]; InEquivalentLang: Text[10])
     begin
+        Target.Reset();
         Target.SetRange("Project Code", inProjectCode);
         Target.SetRange("Target Language ISO code", (InEquivalentLang <> '') ? InEquivalentLang : InTargetLang);
         ProjectCode := inProjectCode;
