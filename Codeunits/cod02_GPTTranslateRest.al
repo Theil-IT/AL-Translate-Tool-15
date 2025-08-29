@@ -77,7 +77,6 @@ codeunit 78602 "BAC GPT Translate Rest"
                 GlossaryTerms += TransTerms.Term + ', ';
                 Glossary.Add(TransTerms.Term);
             until TransTerms.Next() = 0;
-        //GlossaryTerms := 'Market Radar, Business Central, PayTest, MyShopMan';
         SystemPrompt :=
           'You are a professional translator specializing in Microsoft Business Central ERP. ' +
           'Translate from English (US) to the language specified in the first line (ISO format, e.g., da-DK). ' +
