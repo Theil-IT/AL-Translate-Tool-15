@@ -119,6 +119,45 @@ page 78603 "BAC Translation Target List"
                     end;
                 end;
             }
+            action("Copy")
+            {
+                ApplicationArea = All;
+                Caption = 'Copy';
+                Image = Copy;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+                Enabled = ShowTranslate;
+
+                trigger OnAction();
+                begin
+                    Rec.Target := Rec.Source;
+                    Rec.Validate(Target);
+                end;
+            }
+            action("Copy All")
+            {
+                ApplicationArea = All;
+                Caption = 'Copy All';
+                Image = Translations;
+                Promoted = true;
+                PromotedOnly = true;
+                Enabled = ShowTranslate;
+                PromotedCategory = Process;
+
+                trigger OnAction();
+                var
+                    MenuSelectionTxt: Label 'Copy all,Copy only missing';
+                begin
+                    case StrMenu(MenuSelectionTxt, 1) of
+                        1:
+                            CopyAll(false);
+
+                        2:
+                            CopyAll(true);
+                    end;
+                end;
+            }
             action("Select All")
             {
                 ApplicationArea = All;
@@ -300,6 +339,43 @@ page 78603 "BAC Translation Target List"
                 TransTarget."Target Language ISO code" := GetFilter("Target Language ISO code");
                 if TransTarget.Insert() then;
             until TransSource.Next() = 0;
+    end;
+
+
+    local procedure CopyAll(inOnlyEmpty: Boolean)
+    var
+        TransTarget: Record "BAC Translation Target";
+        TransTarget2: Record "BAC Translation Target";
+        Project: Record "BAC Translation Project";
+        Window: Dialog;
+        DialogTxt: Label 'Copying #1###### of #2######';
+        Counter: Integer;
+        TotalCount: Integer;
+        EscapedSource: Text;
+    begin
+        Project.Get(Rec."Project Code");
+        if inOnlyEmpty then
+            TransTarget.SetRange(Target, '');
+        // TransTarget.SetRange(Translate, true);
+        TransTarget.SetRange("Project Code", Project."Project Code");
+        TransTarget.SetRange("Target Language ISO code", Rec."Target Language ISO code");
+
+        TotalCount := TransTarget.Count;
+        Window.Open(DialogTxt);
+
+        if TransTarget.FindSet() then begin
+            repeat
+                Counter += 1;
+                Window.Update(1, Counter);
+                Window.Update(2, TotalCount);
+                TransTarget.Target := TransTarget.Source;
+                TransTarget.Translate := false;
+                TransTarget.Modify();
+                Commit();
+            until TransTarget.Next() = 0;
+        end;
+
+        Window.Close();
     end;
 
     local procedure TranslateAll(inOnlyEmpty: Boolean)

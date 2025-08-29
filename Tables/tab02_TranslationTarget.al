@@ -34,6 +34,7 @@ table 78602 "BAC Translation Target"
             Caption = 'Target Language ISO code';
             Editable = false;
         }
+
         field(50; "Source"; Text[2048])
         {
             DataClassification = AccountData;

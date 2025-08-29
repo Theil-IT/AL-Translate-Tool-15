@@ -40,6 +40,16 @@ page 78602 "BAC Target Language List"
                     ApplicationArea = All;
                     QuickEntry = false;
                 }
+                field("Equivalent Language"; Rec."Equivalent Language")
+                {
+                    ApplicationArea = All;
+                    QuickEntry = false;
+                }
+                field("Equivalent Language ISO code"; Rec."Equivalent Language ISO code")
+                {
+                    ApplicationArea = All;
+                    QuickEntry = false;
+                }
             }
         }
         area(FactBoxes)
@@ -63,10 +73,23 @@ page 78602 "BAC Target Language List"
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;
-                RunObject = page "BAC Translation Target List";
-                RunPageLink = "Project Code" = field("Project Code"),
-                            "Target Language" = field("Target Language"),
-                            "Target Language ISO code" = field("Target Language ISO code");
+
+                trigger OnAction()
+                var
+                    TargetRec: Record "BAC Translation Target";
+                    TranslationTargetList: Page "BAC Translation Target List";
+                    TargetLang: Text[10];
+                begin
+                    // Determine equivalent language
+                    TargetLang := Rec."Equivalent Language ISO code" <> '' ? Rec."Equivalent Language ISO code" : Rec."Target Language ISO code";
+
+                    TargetRec.SetRange("Project Code", Rec."Project Code");
+                    TargetRec.SetRange("Target Language ISO code", TargetLang);
+
+                    TranslationTargetList.SetTableView(TargetRec);
+                    TranslationTargetList.Run();
+
+                end;
             }
             action("Translation Terms")
             {
@@ -76,9 +99,24 @@ page 78602 "BAC Target Language List"
                 Promoted = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;
-                RunObject = page "BAC Translation terms";
-                RunPageLink = "Project Code" = field("Project Code"),
-                            "Target Language" = field("Target Language ISO code");
+
+                trigger OnAction()
+                var
+                    TransTermRec: Record "BAC Translation Term";
+                    TranslationTerms: Page "BAC Translation terms";
+                    TargetLang: Text[10];
+                begin
+                    // Determine equivalent language
+                    TargetLang := Rec."Equivalent Language ISO code" <> ''
+                        ? Rec."Equivalent Language ISO code"
+                        : Rec."Target Language ISO code";
+
+                    TransTermRec.SetRange("Project Code", Rec."Project Code");
+                    TransTermRec.SetRange("Target Language", TargetLang);
+
+                    TranslationTerms.SetTableView(TransTermRec);
+                    TranslationTerms.Run();
+                end;
             }
             action("Project Terms")
             {
@@ -113,7 +151,7 @@ page 78602 "BAC Target Language List"
                         case TransProject."NAV Version" of
                             TransProject."NAV Version"::"Dynamics 365 Business Central":
                                 begin
-                                    ExportTranslation.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code");
+                                    ExportTranslation.SetProjectCode(Rec."Project Code", Rec."Source Language ISO code", Rec."Target Language ISO code", Rec."Equivalent Language ISO code");
                                     ExportTranslation.Run();
                                 end;
                             TransProject."NAV Version"::"Dynamics NAV 2018":

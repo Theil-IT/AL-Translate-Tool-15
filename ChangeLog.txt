@@ -1,4 +1,11 @@
 Change log for the AL Translation Tool:
+
+2025-08-29 : Add support for "Equivalent language" JTH
+2025-08-04 : Add OpenAI API Translation option     JTH
+2025-08-01 : Add support for pre-translate terms   JTH
+2025-08-01 : Update to BC26
+
+
 2019-07-02 Released the first Beta. PBA
         Remaining Issues:
         - xmlport 78602 "BAC Import Translation Target": not exporting notes correctly. Works anyway

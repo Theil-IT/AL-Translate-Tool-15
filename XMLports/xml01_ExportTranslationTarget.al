@@ -136,29 +136,41 @@ xmlport 78601 "BAC Export Translation Target"
         ProjectCode: Code[10];
         SourceTransCode: Text[10];
         TargetTransCode: Text[10];
+        EquivalentTransCode: Text[10];
         MissingProjNameTxt: Label 'Project Name is Missing';
 
     trigger OnPreXmlPort()
     var
         TempFile: Text;
+        TargetLanguage: Text;
     begin
         TransProject.Get(target.getfilter("Project Code"));
+        TargetLanguage := TargetTransCode;
         TempFile := TransProject."File Name";
-        if StrPos(lowercase(TempFile), '.xlf') > 0 then
+        if StrPos(lowercase(TempFile), '.g.xlf') > 0 then
+            currXMLport.Filename := CopyStr(TempFile, 1, StrPos(lowercase(TempFile), '.g.xlf')) +
+                                     TargetLanguage + '.xlf'
+        else if StrPos(lowercase(TempFile), '.xlf') > 0 then
             currXMLport.Filename := CopyStr(TempFile, 1, StrPos(lowercase(TempFile), '.xlf')) +
-                                     Target.GetFilter("Target Language ISO code") + '.xlf';
-        if StrPos(lowercase(TempFile), '.xlif') > 0 then
+                                     TargetLanguage + '.xlf'
+        else if StrPos(lowercase(TempFile), '.xlif') > 0 then
             currXMLport.Filename := CopyStr(TempFile, 1, StrPos(lowercase(TempFile), '.xlif')) +
-                                     Target.GetFilter("Target Language ISO code") + '.xlif';
+                                     TargetLanguage + '.xlif';
     end;
 
     procedure SetProjectCode(inProjectCode: Code[10]; InSourceLang: Text[10]; InTargetLang: Text[10])
     begin
+        SetProjectCode(inProjectCode, InSourceLang, InTargetLang, '');
+    end;
+
+    procedure SetProjectCode(inProjectCode: Code[10]; InSourceLang: Text[10]; InTargetLang: Text[10]; InEquivalentLang: Text[10])
+    begin
         Target.SetRange("Project Code", inProjectCode);
-        Target.SetRange("Target Language ISO code", InTargetLang);
+        Target.SetRange("Target Language ISO code", (InEquivalentLang <> '') ? InEquivalentLang : InTargetLang);
         ProjectCode := inProjectCode;
         SourceTransCode := InSourceLang;
         TargetTransCode := InTargetLang;
+        EquivalentTransCode := InEquivalentLang;
     end;
 
     local procedure CreateTranNote()

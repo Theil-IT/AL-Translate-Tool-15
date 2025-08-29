@@ -16,7 +16,7 @@ table 78603 "BAC Target Language"
         {
             Caption = 'Project Name';
             FieldClass = FlowField;
-            CalcFormula = lookup ("BAC Translation Project"."Project Name" where("Project Code" = field("Project Code")));
+            CalcFormula = lookup("BAC Translation Project"."Project Name" where("Project Code" = field("Project Code")));
             Editable = false;
         }
 
@@ -59,6 +59,28 @@ table 78603 "BAC Target Language"
         {
             DataClassification = SystemMetadata;
             Caption = 'File Name';
+        }
+        field(60; "Equivalent Language"; Code[10])
+        {
+            DataClassification = AccountData;
+            Caption = 'Equivalent Language';
+            TableRelation = Language;
+            trigger OnValidate()
+            var
+                Language: Record Language;
+            begin
+                if Language.Get("Equivalent Language") then begin
+                    Language.TestField("BAC ISO code");
+                    "Equivalent Language ISO code" := Language."BAC ISO code"
+                end else
+                    clear("Equivalent Language ISO code");
+            end;
+        }
+        field(65; "Equivalent Language ISO code"; Text[10])
+        {
+            DataClassification = AccountData;
+            Caption = 'Equivalent Language ISO code';
+            Editable = false;
         }
     }
 
