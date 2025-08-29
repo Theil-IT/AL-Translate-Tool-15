@@ -64,6 +64,10 @@ codeunit 78602 "BAC GPT Translate Rest"
         Setup: Record "BAC Translation Setup";
         TransTerms: Record "BAC Translation Term";
     begin
+        if (inSourceLang = inTargetLang) then begin
+            outTransText := inText;
+            exit;
+        end;
         Setup := GetTranslationSetup();
         if not Setup."Use ChatGPT" then
             Error('ChatGPT translation is disabled in setup.');

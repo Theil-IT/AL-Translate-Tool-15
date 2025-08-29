@@ -86,13 +86,13 @@ table 78602 "BAC Translation Target"
         {
             Caption = 'Occurrencies';
             FieldClass = FlowField;
-            CalcFormula = count ("BAC Translation Target" where(Source = field(Source)));
+            CalcFormula = count("BAC Translation Target" where(Source = field(Source)));
         }
         field(140; "Field Name"; Text[250])
         {
             Caption = 'Field Name';
             FieldClass = FlowField;
-            CalcFormula = lookup ("BAC Translation Notes".Note where("Project Code" = field("Project Code"),
+            CalcFormula = lookup("BAC Translation Notes".Note where("Project Code" = field("Project Code"),
                                                              "Trans-Unit Id" = field("Trans-Unit Id"),
                                                              From = const('Xliff Generator')));
         }
@@ -114,6 +114,7 @@ table 78602 "BAC Translation Target"
     begin
         TransTarget.Copy(Rec);
         TransTarget.SetRange(Source, Source);
+        TransTarget.SetRange("Target Language", "Target Language");
         Instances := TransTarget.Count;
         if Target = '' then
             exit;

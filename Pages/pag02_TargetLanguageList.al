@@ -78,13 +78,16 @@ page 78602 "BAC Target Language List"
                 var
                     TargetRec: Record "BAC Translation Target";
                     TranslationTargetList: Page "BAC Translation Target List";
+                    TargetLangIso: Text[10];
                     TargetLang: Text[10];
                 begin
                     // Determine equivalent language
-                    TargetLang := Rec."Equivalent Language ISO code" <> '' ? Rec."Equivalent Language ISO code" : Rec."Target Language ISO code";
+                    TargetLangIso := Rec."Equivalent Language ISO code" <> '' ? Rec."Equivalent Language ISO code" : Rec."Target Language ISO code";
+                    TargetLang := Rec."Equivalent Language" <> '' ? Rec."Equivalent Language" : Rec."Target Language";
 
                     TargetRec.SetRange("Project Code", Rec."Project Code");
-                    TargetRec.SetRange("Target Language ISO code", TargetLang);
+                    TargetRec.SetRange("Target Language", TargetLang);
+                    TargetRec.SetRange("Target Language ISO code", TargetLangIso);
 
                     TranslationTargetList.SetTableView(TargetRec);
                     TranslationTargetList.Run();

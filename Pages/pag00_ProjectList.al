@@ -57,7 +57,7 @@ page 78600 "BAC Trans Project List"
                 }
                 field("Base Translation Imported"; Rec."Base Translation Imported")
                 {
-                    ApplicationArea=All;
+                    ApplicationArea = All;
                 }
             }
         }
@@ -135,6 +135,29 @@ page 78600 "BAC Trans Project List"
                 PromotedCategory = Process;
                 RunObject = page "BAC Translation Source List";
                 RunPageLink = "Project Code" = field("Project Code");
+            }
+            action("All Translation Targets")
+            {
+                Caption = 'All Translation Targets';
+                ApplicationArea = All;
+                Image = Translate;
+                Promoted = true;
+                PromotedOnly = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    TargetRec: Record "BAC Translation Target";
+                    TranslationTargetList: Page "BAC Translation Target List";
+                begin
+                    // Determine equivalent language
+
+                    TargetRec.SetRange("Project Code", Rec."Project Code");
+
+                    TranslationTargetList.SetTableView(TargetRec);
+                    TranslationTargetList.Run();
+
+                end;
             }
         }
     }

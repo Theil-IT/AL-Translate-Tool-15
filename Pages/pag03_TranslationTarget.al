@@ -27,6 +27,11 @@ page 78603 "BAC Translation Target List"
                 {
                     ApplicationArea = All;
                 }
+                field("Target Language ISO code"; Rec."Target Language ISO code")
+                {
+                    Visible = ShowTargetLanguageCode;
+                    ApplicationArea = All;
+                }
                 field(Translate2; Translate)
                 {
                     ApplicationArea = All;
@@ -44,7 +49,7 @@ page 78603 "BAC Translation Target List"
                 }
                 field(Occurrencies; Occurrencies)
                 {
-                    Visible = false;
+                    Visible = true;
                     ApplicationArea = All;
                 }
             }
@@ -318,8 +323,10 @@ page 78603 "BAC Translation Target List"
         }
     }
     var
-        [InDataSet]
         ShowTranslate: Boolean;
+        ShowTargetLanguageCode: Boolean;
+        TargetLanguageFilter: Text[10];
+        TargetLanguageIsoFilter: Text[10];
 
 
     trigger OnOpenPage()
@@ -327,18 +334,42 @@ page 78603 "BAC Translation Target List"
         TransSource: Record "BAC Translation Source";
         TransTarget: Record "BAC Translation Target";
         TransSetup: Record "BAC Translation Setup";
+        TargetLanguage: Record "BAC Target Language";
     begin
         TransSetup.get();
         ShowTranslate := TransSetup."Use Free Google Translate" or TransSetup."Use ChatGPT";
+        ShowTargetLanguageCode := true;
+        TargetLanguageFilter := Rec.GetFilter("Target Language");
+        TargetLanguageIsoFilter := Rec.GetFilter("Target Language ISO code");
+        if (TargetLanguageFilter <> '') then begin
 
-        TransSource.SetFilter("Project Code", GetFilter("Project Code"));
-        if TransSource.FindSet() then
-            repeat
-                TransTarget.TransferFields(TransSource);
-                TransTarget."Target Language" := GetFilter("Target Language");
-                TransTarget."Target Language ISO code" := GetFilter("Target Language ISO code");
-                if TransTarget.Insert() then;
-            until TransSource.Next() = 0;
+            TransSource.SetFilter("Project Code", Rec.GetFilter("Project Code"));
+            if TransSource.FindSet() then
+                repeat
+                    TransTarget.TransferFields(TransSource);
+                    TransTarget."Target Language" := TargetLanguageFilter;
+                    TransTarget."Target Language ISO code" := TargetLanguageIsoFilter;
+                    if TransTarget.Insert() then;
+                until TransSource.Next() = 0;
+        end
+        else begin
+            // No Target language, loop through all languages. 
+            TargetLanguage.SetFilter("Project Code", Rec.GetFilter("Project Code"));
+            if TargetLanguage.FindSet() then
+                repeat
+                    if (TargetLanguage."Equivalent Language" = '') then begin
+                        TransSource.Reset();
+                        TransSource.SetFilter("Project Code", Rec.GetFilter("Project Code"));
+                        if TransSource.FindSet() then
+                            repeat
+                                TransTarget.TransferFields(TransSource);
+                                TransTarget."Target Language" := TargetLanguage."Target Language";
+                                TransTarget."Target Language ISO code" := TargetLanguage."Target Language ISO code";
+                                if TransTarget.Insert() then;
+                            until TransSource.Next() = 0;
+                    end;
+                until TargetLanguage.Next() = 0;
+        end;
     end;
 
 
@@ -391,66 +422,48 @@ page 78603 "BAC Translation Target List"
         EscapedSource: Text;
     begin
         Project.Get(Rec."Project Code");
+
         if inOnlyEmpty then
             TransTarget.SetRange(Target, '');
         TransTarget.SetRange(Translate, true);
         TransTarget.SetRange("Project Code", Project."Project Code");
-        TransTarget.SetRange("Target Language ISO code", Rec."Target Language ISO code");
+        if (TargetLanguageIsoFilter <> '') then
+            TransTarget.SetRange("Target Language ISO code", TargetLanguageIsoFilter);
 
         TotalCount := TransTarget.Count;
         Window.Open(DialogTxt);
 
-        // First pass: Occurrencies = 1
-        TransTarget.SetRange(Occurrencies, 1);
-        if TransTarget.FindSet() then begin
-            repeat
-                Counter += 1;
-                Window.Update(1, Counter);
-                Window.Update(2, TotalCount);
-                TransTarget.Target := Translater.Translate(Project."Project Code", Project."Source Language ISO code",
-                                          Rec."Target Language ISO code",
-                                          TransTarget.Source);
-                TransTarget.Target := ReplaceTermInTranslation(Rec."Target Language ISO code", TransTarget.Target);
-                TransTarget.Translate := false;
-                TransTarget.Modify();
-                Commit();
-            until TransTarget.Next() = 0;
-        end;
-
-        // Reset for second pass
-        TransTarget.Reset();
-        if inOnlyEmpty then
-            TransTarget.SetRange(Target, '');
-        TransTarget.SetRange(Translate, true);
-        TransTarget.SetRange("Project Code", Project."Project Code");
-        TransTarget.SetRange("Target Language ISO code", Rec."Target Language ISO code");
         TransTarget.SetCurrentKey(Source);
-        TransTarget.SetFilter(Occurrencies, '>1');
         if TransTarget.FindSet() then begin
             repeat
                 Counter += 1;
                 Window.Update(1, Counter);
                 Window.Update(2, TotalCount);
-                TransTarget.Target := Translater.Translate(Project."Project Code", Project."Source Language ISO code",
-                                              Rec."Target Language ISO code",
-                                              TransTarget.Source);
-                TransTarget.Target := ReplaceTermInTranslation(Rec."Target Language ISO code", TransTarget.Target);
 
-                // Escape only for TransTarget2
+                TransTarget.Target :=
+                  Translater.Translate(Project."Project Code",
+                                       Project."Source Language ISO code",
+                                       TransTarget."Target Language ISO code",
+                                       TransTarget.Source);
+                TransTarget.Target :=
+                  ReplaceTermInTranslation(TransTarget."Target Language ISO code", TransTarget.Target);
+                TransTarget.Translate := false;
+                // Escape source for filter
                 EscapedSource := StrSubstNo('''%1''', TransTarget.Source.Replace('''', ''''''));
                 TransTarget2.SetFilter(Source, EscapedSource);
-                TransTarget2.SetFilter("Target Language ISO code", Rec."Target Language ISO code");
-                TransTarget2.ModifyAll(Target, TransTarget.Target);
+                TransTarget2.SetFilter("Target Language ISO code", TransTarget."Target Language ISO code");
+                if inOnlyEmpty then
+                    TransTarget2.SetRange(Target, '');
 
-                // Mark all as not needing translate
+                TransTarget2.ModifyAll(Target, TransTarget.Target);
                 TransTarget2.ModifyAll(Translate, false);
 
                 Commit();
                 SelectLatestVersion();
 
-                // Use raw value here
-                TransTarget.SetFilter(Source, '<>%1', TransTarget.Source);
-            until TransTarget.FindSet() = false;
+            // Skip already-handled source
+            // TransTarget.SetFilter(Source, '<>%1', TransTarget.Source);
+            until TransTarget.Next() = 0;
         end;
 
         Window.Close();
