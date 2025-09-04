@@ -1,3 +1,5 @@
+# NOTE: This fork is not maintained, see [The BCMAN repo instead](https://github.com/Theil-IT/bcxman)
+
 Written by Peik Bech-Andersen
 Web site http://b-a.dk/
 Blog: https://dynamicsuser.net/nav/b/peik
